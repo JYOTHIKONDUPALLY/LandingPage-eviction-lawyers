@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Eviction Solicitors – England & Wales | SLS Solicitors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SLS Solicitors</a>
+                       
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Our Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Desktop Contact Info -->
+            <div class="d-none d-lg-flex align-items-center me-3">
+                <a href="tel:08001234567" class="header-contact me-3">
+                    <i class="fas fa-phone me-2"></i>
+                    Call Free: 0800 123 4567
+                </a>
+                <a href="#contact" class="cta-button">Start My Eviction</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile CTA Banner -->
+    <div class="mobile-cta-banner d-md-none">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-8">
+                    <a href="tel:08001234567" class="btn btn-sm">  <i class="fas fa-phone me-3"></i><small><strong>Call Free: 0800 123 4567</strong></small></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Banner -->
+    <div class="trust-banner">
+        <!-- Desktop version - static -->
+        <div class="d-none d-md-block">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            SRA Regulated Solicitors
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="trust-item">
+                            <i class="fas fa-database"></i>
+                            ICO Registered
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="trust-item">
+                            <i class="fas fa-home"></i>
+                            Landlords Ourselves
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="trust-item">
+                            <i class="fas fa-pound-sign"></i>
+                            Fixed-Fee from £100 + VAT
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="trust-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Nationwide Coverage
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile version - carousel -->
+        <div class="d-md-none">
+            <div id="trustCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            SRA Regulated Solicitors
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="trust-item">
+                            <i class="fas fa-database"></i>
+                            ICO Registered
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="trust-item">
+                            <i class="fas fa-home"></i>
+                            Landlords Ourselves
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="trust-item">
+                            <i class="fas fa-pound-sign"></i>
+                            Fixed-Fee from £100 + VAT
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="trust-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Nationwide Coverage
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Contact Form - Left Side on Desktop -->
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div id="contact" class="contact-form">
+                        <h3><i class="fas fa-gavel"></i> Start Your Eviction Today</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eviction-type" class="form-label">Eviction Type</label>
+                                <select class="form-select" id="eviction-type" name="eviction-type" required>
+                                    <option value="">Select eviction type...</option>
+                                    <option value="section21">Section 21 (No-Fault)</option>
+                                    <option value="section8">Section 8 (Fault-Based)</option>
+                                    <option value="unsure">Not Sure</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="situation" class="form-label">Brief Description</label>
+                                <textarea class="form-control" id="situation" name="situation" rows="3" placeholder="Tell us about your situation..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-rocket"></i> Start My Eviction Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Hero Content - Right Side on Desktop -->
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <h1>Fast & Legal Tenant Eviction Solicitors</h1>
+                    <p class="subtitle">England & Wales Professional Legal Services</p>
+                    <p class="description">Fast, Legal & Fixed-Fee Tenant Evictions from SRA-Regulated Solicitor Firm with over 20 years' experience. Notices served within 24 hours.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-text">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24hrs</div>
+                            <div class="stat-text">Notice Service</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">£100</div>
+                            <div class="stat-text">Starting Price</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Eviction Section -->
+    <section class="section-alt py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Legal gavel and documents" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">What Is Eviction in England & Wales?</h2>
+                    <p class="lead">Eviction is the formal legal process for regaining possession of your property. Landlords must comply with the Housing Act 1988, Housing Act 1996, and Renters (Reform) Bill 2025 updates.</p>
+                    
+                    <div class="warning-card-red" style="color: red;">
+                        <h3><i class="fas fa-exclamation-triangle me-2" style="color: red;"></i> If you cut corners, you risk:</h3>
+                        <ul class="checklist">
+                            <li>
+                                <span class="cross-icon-red" ><i class="fas fa-times"></i></span>
+                                Invalid notices → delays & extra cost
+                            </li>
+                            <li>
+                                <span class="cross-icon-red"><i class="fas fa-times"></i></span>
+                                Claims of illegal eviction → criminal sanctions
+                            </li>
+                            <li>
+                                <span class="cross-icon-red"><i class="fas fa-times"></i></span>
+                                Compensation claims from tenants
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h3>Our Experience in Action:</h3>
+                        <p>In 2024, a London landlord served an invalid Section 21 due to missing deposit paperwork. We corrected compliance, re-served properly, and secured vacant possession within 10 weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 21 -->
+    <section class="py-5" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <!-- <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Legal documents and consultation" class="img-fluid rounded mb-4"> -->
+                    
+                    <h2>Section 21 – No-Fault Eviction</h2>
+                    <p>Section 21 allows landlords to end an AST (Assured Shorthold Tenancy) without proving fault.</p>
+                    
+                    <div class="card-modern">
+                        <div class="card-body">
+                            <h3><i class="fas fa-check-circle text-success me-2"></i> When You Can Use Section 21</h3>
+                            <ul class="checklist">
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    End of fixed term or during periodic tenancy
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    To sell or re-occupy the property
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Where tenancy documents are fully compliant
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card-modern">
+                        <!-- <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Compliance checklist" class="img-fluid"> -->
+                        <div class="card-body">
+                            <h3><i class="fas fa-clipboard-list me-2" style="color: var(--primary-navy);"></i> Landlord Compliance Checklist</h3>
+                            <p>Before serving Section 21 you must have:</p>
+                            <ul class="checklist">
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Deposit protected in government-approved scheme
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Gas Safety Certificate given
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Energy Performance Certificate (EPC) provided
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Latest How to Rent guide issued
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    HMO/selective licence (if applicable)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="section-alt py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>Section 8 – Fault-Based Eviction</h2>
+                    <p>Section 8 is used where tenants have breached tenancy terms.</p>
+                    
+                    <div class="card-modern">
+                        <!-- <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Legal gavel" class="img-fluid"> -->
+                        <div class="card-body">
+                            <h3><i class="fas fa-gavel me-2" style="color: var(--secondary-orange);"></i> Common Mandatory Grounds</h3>
+                            <ul class="checklist">
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Ground 8: 2+ months' rent arrears (mandatory possession)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card-modern">
+                        <!-- <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Legal documentation" class="img-fluid"> -->
+                        <div class="card-body">
+                            <h3><i class="fas fa-list-ul me-2" style="color: var(--accent-teal);"></i> Common Discretionary Grounds</h3>
+                            <ul class="checklist">
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Ground 10/11: persistent rent arrears
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Ground 12: breach of tenancy obligations
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Ground 13: neglect/damage to property
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Ground 14: nuisance/anti-social behaviour
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="experience-card">
+                        <h3>Our Expertise in Action:</h3>
+                        <p>A Birmingham landlord's tenant owed 4 months' rent. We issued Section 8 on Grounds 8 & 10. At court, possession was granted in 14 days plus arrears and costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Eviction Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                    <h4>Eviction Advice & Notice</h4>
+                    <p>Expertly drafted and legally compliant notices including Section 8, Section 21, and more — with trusted legal advice every step of the way.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h4>Guaranteed Eviction (Uncontested Cases)</h4>
+                    <p>Full court preparation & representation including bailiff attendance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                    <h4>Priority Super Guaranteed Eviction</h4>
+                    <p>Complete eviction service including replies to tenant defences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                    <h4>Rent Recovery & Advice</h4>
+                    <p>Help recovering rent arrears. Additional disbursements may apply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title">Step-by-Step Eviction Court Process</h2>
+            <p class="section-subtitle">Typical timeline: 6–12 weeks, depending on court backlog and tenant defences.</p>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h4>Serve Notice</h4>
+                    <p>Serve Section 21 or Section 8 notice to tenant with proper legal requirements met.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h4>Wait for Expiry</h4>
+                    <p>2 weeks–2 months waiting period, depending on grounds and notice type served.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h4>Issue Possession Claim</h4>
+                    <p>Accelerated or standard claim process filed with the appropriate court.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h4>Court Review/Hearing</h4>
+                    <p>Paper review for accelerated claims or oral hearing for standard claims.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">5</div>
+                    <h4>Possession Order</h4>
+                    <p>Court typically grants possession order within 14–28 days of hearing.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">6</div>
+                    <h4>Bailiff Enforcement</h4>
+                    <p>If tenant does not vacate voluntarily, bailiff enforcement arranged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="why-choose-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Why Choose SLS Solicitors?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4>Legal Expertise</h4>
+                    <p>Over 20 years practicing landlord law with extensive court experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                    <h4>Real Experience</h4>
+                    <p>We're landlords ourselves – practical advice, not just theory.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Authority</h4>
+                    <p>SRA Regulated solicitors & ICO Registered firm you can trust.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h4>Nationwide</h4>
+                    <p>London, Birmingham, Cardiff, Manchester & more across England & Wales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Fixed-Fee Packages</h2>
+            <p class="section-subtitle">Transparent, affordable, reliable legal services</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Eviction Advice & Notice</h4>
+                    <div class="price">£100<span style="font-size: 1rem;"> + VAT</span></div>
+                    <p class="price-subtitle">Section 21 or Section 8 notice preparation and service</p>
+                    <a href="#contact" class="pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h4>Guaranteed Eviction (Uncontested Cases)</h4>
+                    <div class="price">£1500<span style="font-size: 1rem;"> + VAT</span></div>
+                    <p class="price-subtitle">Full court preparation & representation including bailiff attendance.</p>
+                    <a href="#contact" class="pricing-btn">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h4>Priority Super Guaranteed Eviction</h4>
+                    <div class="price">£2500<span style="font-size: 1rem;"> + VAT</span></div>
+                    <p class="price-subtitle">Complete eviction service including replies to tenant defences.</p>
+                    <a href="#contact" class="pricing-btn">Get Started</a>
+                </div>
+                
+                
+                
+                <div class="pricing-card">
+                    <h4>Rent Recovery & Advice</h4>
+                    <div class="price">£1300<span style="font-size: 1rem;"> + VAT</span ><span style="font-size: 0.75rem;">+ Dibs</span></div>
+                    <p class="price-subtitle">Help recovering rent arrears. Additional disbursements may apply.</p>
+                    <a href="#contact" class="pricing-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas We Cover -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-4 section-title">Areas We Cover</h2>
+                    <p class="lead mb-4 ">
+                        We provide eviction and housing legal services for landlords, tenants, and agents across
+                        <strong>England and Wales</strong>. Whether you're based in a major city or surrounding area, we can help.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card-modern">
+                                <div class="card-body">
+                                    <h5 class="section-subtitle">Major Cities</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• London</li>
+                                        <li>• Manchester</li>
+                                        <li>• Birmingham</li>
+                                        <li>• Leeds</li>
+                                        <li>• Liverpool</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card-modern">
+                                <div class="card-body">
+                                    <h5 class="section-subtitle">Regional Centers</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• Sheffield</li>
+                                        <li>• Bristol</li>
+                                        <li>• Nottingham</li>
+                                        <li>• Newcastle</li>
+                                        <li>• Cardiff</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card-modern">
+                                <div class="card-body">
+                                    <h5 class="section-subtitle">Wales & More</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• Swansea</li>
+                                        <li>• Leicester</li>
+                                        <li>• Southampton</li>
+                                        <li>• Coventry</li>
+                                        <li>• All surrounding areas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Even if your area is not listed above, we operate <strong>nationwide across England and Wales</strong>. 
+                        Contact us today and we'll confirm how quickly we can assist you.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Testimonial Carousel Section -->
+  <div class="mt-5 p-5">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-0c93b143-9f76-433b-9fe5-b4f9df625670" data-elfsight-app-lazy></div>
+  </div>
+
+    <!-- FAQ Section -->
+    <section class="section-alt py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I evict a tenant without a court order?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No. Doing so is an illegal eviction and risks prosecution. You must always follow the proper legal process through the courts.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How long does eviction take in 2025?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>On average 6–12 weeks, but court backlogs can extend this. We work to minimize delays through proper preparation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What if my tenant claims disrepair?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We prepare evidence and counterclaims to protect landlords. Disrepair claims are a common defense tactic we're experienced in handling.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Will Section 21 still exist?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It is due to be abolished under the Renters' Reform Bill. We prepare landlords for Section 8 alternatives and keep you updated on changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illegal Eviction Warning -->
+    <section class="section-highlight py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4"><i class="fas fa-exclamation-triangle me-2"></i> Illegal Eviction – Avoid Criminal Liability</h2>
+                    <p class="fs-5 mb-4">Landlords must never:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="warning-card" style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
+                                <h3 style="color: white;"><i class="fas fa-key me-2"></i> Change Locks</h3>
+                                <p>Without a court order</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="warning-card" style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
+                                <h3 style="color: white;"><i class="fas fa-plug me-2"></i> Cut Utilities</h3>
+                                <p>To force tenant out</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="warning-card" style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
+                                <h3 style="color: white;"><i class="fas fa-user-times me-2"></i> Harass Tenants</h3>
+                                <p>Or make threats</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="fs-5 fw-bold mt-4">
+                        ⚠️ Illegal eviction is a criminal offence. We act to protect your rights while keeping you fully compliant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Contact Form -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center">Start Your Eviction Today</h2>
+                    <p class="text-center" style="font-size: 18px; margin-bottom: 3rem;">Complete our 30-second form and we'll call you back within 24 hours</p>
+                    
+                    <form class="info-card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label" style="font-weight: 500;">Full Name *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label" style="font-weight: 500;">Phone Number *</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: 500;">Email Address *</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: 500;">Property Address *</label>
+                            <textarea class="form-control" rows="2" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: 500;">Eviction Type Needed</label>
+                            <select class="form-control">
+                                <option>Section 21 (No-fault eviction)</option>
+                                <option>Section 8 (Rent arrears)</option>
+                                <option>Section 8 (Other breach)</option>
+                                <option>Not sure - need advice</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" style="font-weight: 500;">Brief Description of Situation</label>
+                            <textarea class="form-control" rows="3" placeholder="Tell us about your situation..."></textarea>
+                        </div>
+                        <!-- ✅ Consent Checkbox -->
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="consentCheck" required>
+                        <label class="form-check-label" for="consentCheck">
+                            I consent to SLS Solicitors storing and processing my personal data for the purpose of responding to my enquiry. 
+                            I have read and agree to the <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.
+                        </label>
+                    </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn-secondary-orange submit-btn">
+                                <i class="fas fa-paper-plane"></i> Start My Eviction Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed CTA Bar -->
+    <div class="fixed-cta" id="fixedCta">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Need help with eviction?</strong>
+                    <span class="d-none d-md-inline ms-2">Call now for free advice</span>
+                </div>
+                <a href="tel:08001234567" class="btn">
+                    <i class="fas fa-phone me-2"></i> Call 0800 123 4567
+                </a>
+            </div>
+        </div>
+    </div>
+        <!-- Footer -->
+ <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Company Info -->
+        <div class="col-md-6 text-center text-md-start">
+          <div class="mb-3">
+            <!-- <img src="assets/Eviction_lawyers_logo.png" alt="logo" width="100" height="80" class="me-2" /> -->
+            <!-- <span class="fw-bold text-white fs-4">Eviction Lawyers</span> -->
+             <a class="navbar-brand" href="#">SLS Solicitors</a>
+          </div>
+
+          <p class="small mb-3">
+            Eviction Lawyers is a trading name of LLB Legal Marketing Limited, a company registered in
+            England and Wales (Company No. 13772872). We are registered with the Information Commissioner's Office (ICO)
+            for
+            data protection purposes (Registration No. 00012507817). We are a lead generation business for law
+            firms and do not provide legal advice or claims management services. All legal work is carried out by our
+            panel solicitors, who are authorised and regulated by the Solicitors Regulation Authority (SRA).
+          </p>
+
+          <div class="d-block d-md-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+            <!-- Start of SRA Digital Badge code -->
+            <div class="yoshkidiv">
+              <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
+            </div>
+            <!-- End of SRA Digital Badge code -->
+            <div class="icoLogo">
+              <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Links Section -->
+        <div class="col-md-6 text-center text-md-start ">
+          <div class="text-center mb-4">
+            <div class="top-rated-badge">
+              <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
+              <span>Top-Rated Legal Services</span>
+            </div>
+          </div>
+          <div class="row text-center text-md-start g-4">
+            <!-- Services -->
+            <div class="col-md-4 mb-2">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Services</h6>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><a href="services.html#eviction-notices" class="text-white footer-link">Eviction Notice
+                    Service</a></li>
+                <li class="mb-2"><a href="services.html#court-representation" class="text-white footer-link">Eviction
+                    Court Representation</a></li>
+                <li class="mb-2"><a href="services.html#bailiff-enforcement" class="text-white footer-link">Guaranteed
+                    Eviction Service</a></li>
+                <li class="mb-2"><a href="services.html#rent-recovery" class="text-white footer-link">Rent Arrears
+                    Recovery</a></li>
+                <li class="mb-2"><a href="services.html#section8" class="text-white footer-link">Complicated Eviction
+                    Cases</a></li>
+              </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-2">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Quick Links</h6>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><a href="index.html" class="text-white footer-link">Home</a></li>
+                <li class="mb-2"><a href="about.html" class="text-white footer-link">About Us</a></li>
+                <li class="mb-2"><a href="services.html" class="text-white footer-link">Services</a></li>
+                <li class="mb-2"><a href="contact.html" class="text-white footer-link">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Contact</h6>
+
+              <div class="d-flex align-items-start mb-3">
+                <i class="fas fa-map-marker-alt text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <div>
+                    <i class="fas fa-map-marker-alt text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                    85 Great Portland Street,<br>
+                    First Floor, London, W1W 7LT<br>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-envelope text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-envelope text-white d-inline-block d-md-none me-2"></i>
+                  <strong>Email:</strong>
+                  <a href="mailto:info@evictionlawyers.co.uk"
+                    class="text-white text-decoration-none">info@evictionlawyers.co.uk</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-phone text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-phone text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                  <strong>Phone:</strong>
+                  <a href="tel:03333050381" class="text-white text-decoration-none">0333 050 5381</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-4">
+                <i class="fas fa-clock text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-clock text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                  <strong>Hours:</strong> Mon–Fri, 9am–6pm
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<hr style="color: white;"/>
+
+      <!-- Footer Bottom -->
+      <div class="d-block d-md-flex justify-content-around align-items-center mt-3">
+        <div class="text-center px-3">
+          <small>&copy; 2025 Eviction Lawyers. All rights reserved.</small>
+        </div>
+        <div class="d-block d-md-flex justify-content-center gap-2 text-center">
+          <p class="mb-1 mb-md-0"><a href="TermsAndConditions.html" class="text-white">Terms and Conditions</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="PrivacyPolicy.html" class="text-white">Privacy Policy</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="CookiePolicy.html" class="text-white">Cookie Policy</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="Disclaimer.html" class="text-white">complaints</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-answer.show').forEach(item => {
+                    item.classList.remove('show');
+                });
+                document.querySelectorAll('.faq-question i').forEach(i => {
+                    i.classList.remove('fa-chevron-up');
+                    i.classList.add('fa-chevron-down');
+                });
+                
+                // Open clicked FAQ
+                answer.classList.add('show');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile navbar if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you within 24 hours to discuss your eviction case.');
+        });
+
+        // Show/hide fixed CTA based on scroll
+        window.addEventListener('scroll', function() {
+            const fixedCta = document.getElementById('fixedCta');
+            const heroSection = document.querySelector('.hero');
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            if (window.scrollY > heroBottom) {
+                fixedCta.classList.add('show');
+            } else {
+                fixedCta.classList.remove('show');
+            }
+        });
+
+        // Initialize carousel for mobile trust banner
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('trustCarousel');
+            if (carousel) {
+                new bootstrap.Carousel(carousel, {
+                    interval: 2000,
+                    wrap: true,
+                    pause: false
+                });
+            }
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.card-modern, .warning-card, .experience-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+         // Observe all cards for animation
+        document.querySelectorAll('.process-card, .service-card, .feature-card, .pricing-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
