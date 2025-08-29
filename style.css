@@ -747,7 +747,9 @@
          justify-content: center;
          flex-wrap: wrap;
      }
-
+ .icoLogo{
+    margin-top: 20px;
+ }
  
 
 
@@ -800,6 +802,7 @@
      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
      /* soft shadow */
      width: 200px;
+     
  }
 
  .icoLogo img {
