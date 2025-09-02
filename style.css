@@ -76,6 +76,23 @@
  .header-contact:hover {
      color: var(--accent-teal);
  }
+ .header-actions{
+    background-color: var(--white);
+ }
+ .header-actions >.cta-button{
+    margin: 10px;
+    border-radius: 10px !important;
+    padding: 10px 20px;
+    text-align: center;
+ }
+ .header-actions >.cta-button-white{
+    margin: 10px;
+    border-radius: 10px !important;
+    padding: 10px 20px;
+    text-align: center;
+    border: 2px solid var(--accent-teal);
+ }
+
 /* Search Bar Styles */
 #mobileSearch {
     position: fixed !important;
