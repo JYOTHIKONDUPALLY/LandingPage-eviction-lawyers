@@ -767,7 +767,7 @@
   width: 100%;
   background: var(--accent-teal); /* teal-like background */
   z-index: 9999;
-  height: 50px;
+  height: 70px;
 }
 
 .cta-nav {
@@ -785,8 +785,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
-  font-size: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   background: var(--accent-teal); /* same background */
 }
 
@@ -795,7 +795,7 @@
 }
 
 .cta-button-nav i {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   margin-bottom: 0.3rem;
   color: var(--secondary-orange);
 }
