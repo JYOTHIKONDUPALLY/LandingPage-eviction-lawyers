@@ -910,7 +910,7 @@
      background: var(--primary-navy);
      color: white;
      padding: 40px 0;
-     margin-bottom: 70px;
+     /* margin-bottom: 70px; */
  }
 
  footer a {
