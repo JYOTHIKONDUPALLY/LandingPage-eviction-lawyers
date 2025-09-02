@@ -81,7 +81,7 @@
      padding: 0.75rem 0;
      text-align: center;
      display: none;
-     margin-top: 20px;
+     /* margin-top: 20px; */
  }
 
  .mobile-cta-banner .btn {
@@ -693,40 +693,73 @@
  .faq-answer.show {
      display: block;
  }
-
- /* Fixed CTA Bar */
  .fixed-cta {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     background: linear-gradient(135deg, var(--accent-teal), #16a085);
-     color: white;
-     padding: 1rem;
-     z-index: 1000;
-     transform: translateY(100%);
-     transition: transform 0.4s ease;
-     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
- }
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
+            color: var(--white);
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
 
- .fixed-cta.show {
-     transform: translateY(0);
- }
+        .cta-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
- .fixed-cta .btn {
-     background: white;
-     color: var(--accent-teal);
-     font-weight: 700;
-     border-radius: 25px;
-     padding: 0.75rem 1.5rem;
-     text-decoration: none;
-     transition: all 0.3s ease;
- }
+        .cta-button-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 12px;
+            min-width: 80px;
+        }
 
- .fixed-cta .btn:hover {
-     background: var(--neutral-bg);
-     transform: scale(1.05);
- }
+        .cta-button-nav:hover {
+            color: var(--white);
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .cta-button-nav i {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+            color: var(--secondary-orange);
+        }
+
+        .cta-button-nav span {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .phone-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
  .non-tenant-section {
             background: var(--white);
             padding: 60px 40px;
@@ -759,6 +792,9 @@
  @media (max-width: 768px) {
      body {
          padding-top: 56px;
+     }
+     .navbar-brand{
+            font-size: 1.25rem;
      }
 
      .mobile-cta-banner {

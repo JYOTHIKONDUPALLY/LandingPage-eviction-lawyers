@@ -14,7 +14,7 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">SLS Solicitors</a>
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
             </div>
             <!-- Desktop Contact Info -->
             <div class="d-none d-lg-flex align-items-center me-3">
-                <a href="tel:08001234567" class="header-contact me-3">
-                    <i class="fas fa-phone me-2"></i>
+                <!-- <a href="tel:08001234567" class="header-contact me-3">
+                    <i class="fas fa-phone "></i>
                     Call Free: 0800 123 4567
-                </a>
+                </a> -->
                 <a href="#contact" class="cta-button">Start My Eviction</a>
             </div>
         </div>
@@ -877,31 +877,39 @@
                                 Section 8 alternatives and keep you updated on changes.</p>
                         </div>
                     </div>
-                     <div class="faq-item">
+                    <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <span>How do I evict a squatter legally in England & Wales (2025)?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>You must apply to court for a possession order against trespassers. Squatters cannot be removed by changing locks or force, as this is illegal eviction. Once the court grants possession, bailiffs or High Court Enforcement Officers can lawfully remove them.</p>
+                            <p>You must apply to court for a possession order against trespassers. Squatters cannot be
+                                removed by changing locks or force, as this is illegal eviction. Once the court grants
+                                possession, bailiffs or High Court Enforcement Officers can lawfully remove them.</p>
                         </div>
                     </div>
-                     <div class="faq-item">
+                    <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <span>Can I evict someone without a tenancy agreement?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p> Yes, but you must follow the correct process. If the occupier is a licensee or has no written tenancy, a court order is still required. If rent was accepted or exclusive possession given, the court may treat it as an implied tenancy, requiring a valid Section 8 notice and possession proceedings.</p>
+                            <p> Yes, but you must follow the correct process. If the occupier is a licensee or has no
+                                written tenancy, a court order is still required. If rent was accepted or exclusive
+                                possession given, the court may treat it as an implied tenancy, requiring a valid
+                                Section 8 notice and possession proceedings.</p>
                         </div>
                     </div>
-                     <div class="faq-item">
+                    <div class="faq-item">
                         <div class="faq-question" onclick="toggleFaq(this)">
                             <span>Is changing the locks without a court order classed as illegal eviction?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes. Even if you believe the occupier has no tenancy, changing locks without a possession order is illegal eviction. This can lead to criminal prosecution and compensation claims. The lawful way is through a possession order enforced by bailiffs or High Court</p>
+                            <p>Yes. Even if you believe the occupier has no tenancy, changing locks without a possession
+                                order is illegal eviction. This can lead to criminal prosecution and compensation
+                                claims. The lawful way is through a possession order enforced by bailiffs or High Court
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1024,7 +1032,8 @@
     </section>
 
     <!-- Fixed CTA Bar -->
-    <div class="fixed-cta" id="fixedCta">
+    <!-- desktop view -->
+    <!-- <div class="fixed-cta" id="fixedCta">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
@@ -1033,6 +1042,25 @@
                 </div>
                 <a href="tel:08001234567" class="btn">
                     <i class="fas fa-phone me-2"></i> Call 0800 123 4567
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="fixed-cta" id="fixedCta">
+        <div class="container">
+            <div class="cta-nav">
+                <a href="tel:08001234567" class="cta-button-nav">
+                    <i class="fas fa-phone phone-pulse"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="mailto:info@evictionlawyers.co.uk" class="cta-button-nav">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Us</span>
+                </a>
+                <a href="#contact" class="cta-button-nav">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Contact Form</span>
                 </a>
             </div>
         </div>
@@ -1293,6 +1321,283 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
+
+        //navbar and search function
+        let searchResults = [];
+let currentResultIndex = 0;
+let originalHTML = '';
+
+// Store original content on page load
+window.addEventListener('load', function() {
+    originalHTML = document.body.innerHTML;
+});
+
+// Toggle search bar
+document.getElementById("searchToggle").addEventListener("click", function () {
+    let searchBar = document.getElementById("mobileSearch");
+    searchBar.classList.toggle("show");
+    if (searchBar.classList.contains("show")) {
+        document.getElementById("mobileSearchInput").focus();
+        showSearchNavigation();
+    } else {
+        clearSearchHighlights();
+        hideSearchNavigation();
+    }
+});
+
+// Real-time search as user types
+document.getElementById("mobileSearchInput").addEventListener("input", function(e) {
+    const query = e.target.value.trim();
+    if (query.length >= 2) { // Start searching after 2 characters
+        performSearch(query);
+    } else {
+        clearSearchHighlights();
+        hideSearchNavigation();
+    }
+});
+
+// Search on enter - navigate to next result
+document.getElementById("mobileSearch").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (searchResults.length > 0) {
+        navigateToResult('next');
+    }
+});
+
+function performSearch(query) {
+    clearSearchHighlights();
+    
+    if (!query) return;
+
+    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+    searchResults = [];
+    
+    // Get all text nodes
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function(node) {
+                // Skip script and style elements
+                const parent = node.parentElement;
+                if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
+            textNodes.push(node);
+        }
+    }
+
+    // Highlight matching text
+    textNodes.forEach(textNode => {
+        const parent = textNode.parentNode;
+        const text = textNode.textContent;
+        
+        if (regex.test(text)) {
+            const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+            const wrapper = document.createElement('span');
+            wrapper.innerHTML = highlightedHTML;
+            
+            parent.replaceChild(wrapper, textNode);
+            
+            // Collect all highlights for navigation
+            const highlights = wrapper.querySelectorAll('.search-highlight');
+            highlights.forEach(highlight => {
+                searchResults.push(highlight);
+            });
+        }
+    });
+
+    // Update search counter and navigate to first result
+    updateSearchUI();
+    if (searchResults.length > 0) {
+        currentResultIndex = 0;
+        scrollToResult(searchResults[currentResultIndex]);
+        showSearchNavigation();
+    } else {
+        hideSearchNavigation();
+    }
+}
+
+function clearSearchHighlights() {
+    // Remove all highlights
+    const highlights = document.querySelectorAll('.search-highlight');
+    highlights.forEach(highlight => {
+        const parent = highlight.parentNode;
+        parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+        parent.normalize(); // Merge adjacent text nodes
+    });
+    
+    // Remove empty span wrappers
+    const emptySpans = document.querySelectorAll('span:empty');
+    emptySpans.forEach(span => span.remove());
+    
+    searchResults = [];
+    currentResultIndex = 0;
+    updateSearchUI();
+}
+
+function navigateToResult(direction) {
+    if (searchResults.length === 0) return;
+    
+    if (direction === 'next') {
+        currentResultIndex = (currentResultIndex + 1) % searchResults.length;
+    } else if (direction === 'prev') {
+        currentResultIndex = currentResultIndex === 0 ? searchResults.length - 1 : currentResultIndex - 1;
+    }
+    
+    scrollToResult(searchResults[currentResultIndex]);
+    updateSearchUI();
+}
+
+function scrollToResult(element) {
+    // Remove previous active highlight
+    document.querySelectorAll('.search-highlight.active').forEach(el => {
+        el.classList.remove('active');
+    });
+    
+    // Add active class to current result
+    element.classList.add('active');
+    
+    // Scroll to element
+    element.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "center",
+        inline: "nearest"
+    });
+}
+
+function updateSearchUI() {
+    // Update counter in the fixed navigation
+    const counter = document.getElementById('searchCounter');
+    if (counter && searchResults.length > 0) {
+        counter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
+    } else if (counter) {
+        counter.textContent = '';
+    }
+    console.log(`Search results: ${currentResultIndex + 1} of ${searchResults.length}`);
+}
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Create fixed search navigation
+function createFixedSearchNavigation() {
+    // Check if navigation already exists
+    if (document.getElementById('fixedSearchNav')) return;
+    
+    const navContainer = document.createElement('div');
+    navContainer.id = 'fixedSearchNav';
+    navContainer.style.cssText = `
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 15px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 10000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        min-width: 60px;
+        align-items: center;
+    `;
+    
+    navContainer.innerHTML = `
+        <button type="button" id="searchPrevBtn" onclick="navigateToResult('prev')" 
+                style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+            ↑
+        </button>
+        <div id="searchCounter" style="color: white; font-size: 12px; text-align: center; min-height: 20px; font-weight: bold;"></div>
+        <button type="button" id="searchNextBtn" onclick="navigateToResult('next')" 
+                style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+            ↓
+        </button>
+        <button type="button" id="closeSearchNav" onclick="hideSearchNavigation()" 
+                style="padding: 8px; background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-top: 5px;">
+            ×
+        </button>
+    `;
+    
+    document.body.appendChild(navContainer);
+    
+    // Add hover effects
+    const buttons = navContainer.querySelectorAll('button');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            if (this.id !== 'closeSearchNav') {
+                this.style.background = 'var(--accent-teal-dark, #188B8B)';
+                this.style.transform = 'scale(1.1)';
+            } else {
+                this.style.background = 'rgba(255, 255, 255, 0.3)';
+            }
+        });
+        btn.addEventListener('mouseleave', function() {
+            if (this.id !== 'closeSearchNav') {
+                this.style.background = 'var(--accent-teal, #20B2AA)';
+                this.style.transform = 'scale(1)';
+            } else {
+                this.style.background = 'rgba(255, 255, 255, 0.2)';
+            }
+        });
+    });
+}
+
+function showSearchNavigation() {
+    const nav = document.getElementById('fixedSearchNav');
+    if (nav && searchResults.length > 0) {
+        nav.style.display = 'flex';
+    }
+}
+
+function hideSearchNavigation() {
+    const nav = document.getElementById('fixedSearchNav');
+    if (nav) {
+        nav.style.display = 'none';
+    }
+}
+
+// Initialize fixed navigation on page load
+window.addEventListener('load', function() {
+    createFixedSearchNavigation();
+});
+
+// Add keyboard shortcuts for navigation
+document.addEventListener('keydown', function(e) {
+    // Only work when search is active
+    const searchBar = document.getElementById("mobileSearch");
+    if (!searchBar || !searchBar.classList.contains("show") || searchResults.length === 0) return;
+    
+    // F3 or Enter for next result
+    if (e.key === 'F3' || (e.key === 'Enter' && e.target.id !== 'mobileSearchInput')) {
+        e.preventDefault();
+        navigateToResult('next');
+    }
+    // Shift + F3 for previous result
+    else if (e.key === 'F3' && e.shiftKey) {
+        e.preventDefault();
+        navigateToResult('prev');
+    }
+    // Escape to close search
+    else if (e.key === 'Escape') {
+        searchBar.classList.remove("show");
+        clearSearchHighlights();
+        hideSearchNavigation();
+    }
+});
+
     </script>
 </body>
 
