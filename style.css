@@ -73,6 +73,17 @@
      transform: translateY(-2px);
      color: var(--white);
  }
+ .search-button {
+   background: rgba(255,255,255,0.2); 
+   border: none; 
+   color: white; 
+   padding: 10px 15px; 
+   border-radius: 25px; 
+   cursor: pointer; 
+   backdrop-filter: blur(10px) ;
+   margin-right: 10px;
+ }
+ 
 
  /* Mobile CTA Banner */
  .mobile-cta-banner {
@@ -227,10 +238,11 @@
 
  /* Stats */
  .hero-stats {
-       display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
-  gap: 2rem;
-  margin: 2rem 0;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     /* 4 columns on large screens */
+     gap: 2rem;
+     margin: 2rem 0;
  }
 
  .stat-item {
@@ -385,10 +397,12 @@
      position: relative;
      transition: transform 0.3s ease;
      display: flex;
-  flex-direction: column;   /* stack children vertically */
-  justify-content: space-between;
-  height: 100%;             /* allow equal height in grid/flex container */
-  box-sizing: border-box;
+     flex-direction: column;
+     /* stack children vertically */
+     justify-content: space-between;
+     height: 100%;
+     /* allow equal height in grid/flex container */
+     box-sizing: border-box;
  }
 
  .pricing-card:hover {
@@ -423,8 +437,9 @@
  .price-subtitle {
      color: var(--body-text);
      /* margin-bottom: 1.5rem; */
-      flex-grow: 1;             /* takes up the flexible middle space */
-  margin: 1rem 0;
+     flex-grow: 1;
+     /* takes up the flexible middle space */
+     margin: 1rem 0;
  }
 
  .pricing-btn {
@@ -438,8 +453,9 @@
      transition: background-color 0.3s ease;
      text-decoration: none;
      display: inline-block;
-     align-self: center;   /* or flex-end / center, depending on alignment you want */
-  margin-top: auto; 
+     align-self: center;
+     /* or flex-end / center, depending on alignment you want */
+     margin-top: auto;
  }
 
  .pricing-btn:hover {
@@ -694,6 +710,7 @@
  .faq-answer.show {
      display: block;
  }
+
  /* .fixed-cta {
             position: fixed;
             bottom: 0;
@@ -760,82 +777,87 @@
             }
         } */
 
-        .fixed-cta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--accent-teal); /* teal-like background */
-  z-index: 9999;
-  /* height: 70px; */
-}
+ .fixed-cta {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: var(--accent-teal);
+     /* teal-like background */
+     z-index: 9999;
+     /* height: 70px; */
+ }
 
-.cta-nav {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
+ .cta-nav {
+     display: flex;
+     justify-content: space-between;
+     text-align: center;
+ }
 
-.cta-button-nav {
-  flex: 1;
-  padding: 0.6rem;
-  color: white; /* black text/icons */
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.75rem;
-  background: var(--accent-teal); /* same background */
-}
+ .cta-button-nav {
+     flex: 1;
+     padding: 0.6rem;
+     color: white;
+     /* black text/icons */
+     text-decoration: none;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-weight: 600;
+     font-size: 0.75rem;
+     background: var(--accent-teal);
+     /* same background */
+ }
 
-.cta-button-nav:not(:last-child) {
-  border-right: 1px solid #000; /* black divider */
-}
+ .cta-button-nav:not(:last-child) {
+     border-right: 1px solid #000;
+     /* black divider */
+ }
 
-.cta-button-nav i {
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
-  color: var(--secondary-orange);
-}
+ .cta-button-nav i {
+     font-size: 0.95rem;
+     margin-bottom: 0.25rem;
+     color: var(--secondary-orange);
+ }
 
 
  .non-tenant-section {
-            background: var(--white);
-            padding: 60px 40px;
-            border-radius: 30px;
-            margin: 60px 0;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-            position: relative;
-        }
+     background: var(--white);
+     padding: 60px 40px;
+     border-radius: 30px;
+     margin: 60px 0;
+     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+     position: relative;
+ }
 
-        .non-tenant-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background:  var(--accent-teal);
-            border-radius: 30px 30px 0 0;
-            
-        }
+ .non-tenant-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 6px;
+     background: var(--accent-teal);
+     border-radius: 30px 30px 0 0;
 
-        .non-tenant-title {
-            font-size: 2.2rem;
-            color: var(--primary-navy);
-            margin-bottom: 30px;
-            text-align: center;
-        }
+ }
+
+ .non-tenant-title {
+     font-size: 2.2rem;
+     color: var(--primary-navy);
+     margin-bottom: 30px;
+     text-align: center;
+ }
 
  /* Mobile Styles */
  @media (max-width: 768px) {
      body {
          padding-top: 56px;
      }
-     .navbar-brand{
-            font-size: 1.25rem;
+
+     .navbar-brand {
+         font-size: 1.25rem;
      }
 
      .mobile-cta-banner {
@@ -847,7 +869,8 @@
      }
 
      .hero-stats {
-          grid-template-columns: repeat(2, 1fr); /* 2 columns */
+         grid-template-columns: repeat(2, 1fr);
+         /* 2 columns */
      }
 
      .experience-cards {
@@ -862,9 +885,11 @@
      .footer-bottom {
          font-size: 12px !important;
      }
-      .non-tenant-section {
-                padding: 20px 10px;
-            }
+
+     .non-tenant-section {
+         padding: 20px 10px;
+     }
+
      .trust-banner .d-none.d-md-block {
          display: none !important;
      }
@@ -872,32 +897,45 @@
      .trust-banner .d-md-none {
          display: block !important;
      }
+
      .eviction-table {
-                font-size: 0.9rem;
-            }
+         font-size: 0.9rem;
+     }
 
-            .eviction-table th {
-                padding: 18px 12px;
-                font-size: 0.75rem;
-            }
+     .eviction-table th {
+         padding: 18px 12px;
+         font-size: 0.75rem;
+     }
 
-            .defence-item {
-                padding: 20px 15px;
-            }
+     .defence-item {
+         padding: 20px 15px;
+     }
 
-            .defence-item strong {
-                font-size: 1rem;
-            }
+     .defence-item strong {
+         font-size: 1rem;
+     }
 
-            .defences-table-container {
-                margin: 0 -15px;
-                border-radius: 0;
-            }
-             .defences-section {
-            margin: 80px 0;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+     .defences-table-container {
+         margin: 0 -15px;
+         border-radius: 0;
+     }
+
+     .defences-section {
+         margin: 80px 0;
+         margin-left: 20px;
+         margin-right: 20px;
+     }
+
+     .accelerated-grid {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+     }
+
+     .accelerated-card,
+     .restrictions-card {
+         margin-bottom: 20px;
+     }
  }
 
  @media (min-width: 769px) {
@@ -927,17 +965,18 @@
      color: white;
      text-decoration: underline;
  }
+
  .small {
-  width: 100%;
-}
+     width: 100%;
+ }
 
-@media (min-width: 992px) {
+ @media (min-width: 992px) {
 
-  /* lg and above */
-  .small {
-    max-width: 400px;
-  }
-}
+     /* lg and above */
+     .small {
+         max-width: 400px;
+     }
+ }
 
  .icoLogo {
      display: inline-flex;
@@ -1029,161 +1068,342 @@
      line-height: 1.7;
      margin-left: 30px;
  }
+
  .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 30px;
+     margin: 40px 0;
+ }
 
-        .info-card {
-            background: var(--neutral-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent-teal);
-        }
+ .info-card {
+     background: var(--neutral-bg);
+     padding: 30px;
+     border-radius: 15px;
+     border-left: 4px solid var(--accent-teal);
+ }
 
-        .info-card h4 {
-            color: var(--primary-navy);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
+ .info-card h4 {
+     color: var(--primary-navy);
+     margin-bottom: 15px;
+     font-size: 1.2rem;
+ }
 
-        .info-card p {
-            color: #666;
-            line-height: 1.6;
-        }
+ .info-card p {
+     color: #666;
+     line-height: 1.6;
+ }
 
-        .warning-section {
-            background: linear-gradient(135deg, #fee2e2, #fecaca);
-            border-left: 5px solid #ef4444;
-            padding: 40px;
-            border-radius: 20px;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
+ .warning-section {
+     background: linear-gradient(135deg, #fee2e2, #fecaca);
+     border-left: 5px solid #ef4444;
+     padding: 40px;
+     border-radius: 20px;
+     margin: 60px 0;
+     position: relative;
+     overflow: hidden;
+ }
 
-        .warning-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: rgba(239, 68, 68, 0.1);
-            border-radius: 50%;
-            transform: translate(50%, -50%);
-        }
+ .warning-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100px;
+     height: 100px;
+     background: rgba(239, 68, 68, 0.1);
+     border-radius: 50%;
+     transform: translate(50%, -50%);
+ }
 
-        .warning-title {
-            display: flex;
-            align-items: center;
-            color: #dc2626;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
+ .warning-title {
+     display: flex;
+     align-items: center;
+     color: #dc2626;
+     font-size: 1.5rem;
+     margin-bottom: 20px;
+     font-weight: 600;
+ }
 
-        .warning-title i {
-            margin-right: 15px;
-            font-size: 1.8rem;
-        }
+ .warning-title i {
+     margin-right: 15px;
+     font-size: 1.8rem;
+ }
 
-        .warning-list {
-            list-style: none;
-        }
+ .warning-list {
+     list-style: none;
+ }
 
-        .warning-list li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #7f1d1d;
-            font-weight: 500;
-        }
-         .defences-section {
-            margin: 80px 0;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
+ .warning-list li {
+     display: flex;
+     align-items: center;
+     margin-bottom: 15px;
+     color: #7f1d1d;
+     font-weight: 500;
+ }
 
-        .defences-table-container {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 0;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border: 1px solid rgba(19, 136, 125, 0.1);
-        }
+ .section-21-section {
+     margin: 80px 40px;
+ }
 
-        .eviction-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0;
-            font-size: 1rem;
-        }
+ .section-description {
+     font-size: 1.2rem;
+     color: #666;
+     max-width: 600px;
+     margin: 15px auto;
+ }
 
-        .eviction-table thead {
-            background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
-            color: var(--white);
-        }
+ .accelerated-grid {
+     display: flex;
+     justify-content: space-between;
+        gap: 30px;
+ }
 
-        .eviction-table th {
-            padding: 25px 30px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 1.2rem;
-            border: none;
-        }
+ .accelerated-card,
+ .restrictions-card {
+     background: var(--white);
+     border-radius: 20px;
+     padding: 40px;
+     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     border: 1px solid rgba(19, 136, 125, 0.1);
+     position: relative;
+     overflow: hidden;
+ }
 
-        .tenancy-header {
-            background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
-        }
+ .accelerated-card::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 5px;
+     background: linear-gradient(90deg, #4caf50, #8bc34a);
+ }
 
-        .non-tenancy-header {
-            background: linear-gradient(135deg, var(--accent-teal), #16a085);
-        }
+ .restrictions-card::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 5px;
+     background: linear-gradient(90deg, #ff5722, #f44336);
+ }
 
-        .eviction-table td {
-            padding: 0;
-            border: 1px solid rgba(19, 136, 125, 0.1);
-            vertical-align: top;
-        }
+ .accelerated-card:hover,
+ .restrictions-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+ }
 
-        .defence-item {
-            padding: 25px 30px;
-            height: 100%;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+ .card-icon.warning {
+     color: var(--secondary-orange);
+ }
 
-        .defence-item:hover {
-            /* background: rgba(19, 136, 125, 0.03); */
-            background-color: #f9f1d6;
-        }
+ .lead-text {
+     font-size: 1.1rem;
+     color: #555;
+     margin-bottom: 25px;
+     line-height: 1.7;
+ }
 
-        .defence-item strong {
-            color: var(--primary-navy);
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 8px;
-        }
+ .benefits-list,
+ .restrictions-list {
+     margin: 25px 0;
+ }
 
-        .defence-item p {
-            color: #666;
-            margin: 0;
-            line-height: 1.6;
-        }
+ .benefit-item {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 15px;
+     padding: 12px;
+     background: rgba(76, 175, 80, 0.05);
+     border-radius: 10px;
+     border-left: 3px solid #4caf50;
+ }
 
-        .defence-item.non-unique em {
-            color: #888;
-            font-style: italic;
-        }
+ .benefit-item i {
+     color: #4caf50;
+     margin-right: 12px;
+     margin-top: 2px;
+     font-size: 1.1rem;
+ }
 
-        .eviction-table tr:nth-child(even) {
-            background: rgba(247, 248, 250, 0.3);
-        }
+ .restriction-item {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 20px;
+     padding: 15px;
+     background: rgba(255, 87, 34, 0.05);
+     border-radius: 10px;
+     border-left: 3px solid #ff5722;
+ }
 
-        .eviction-table tr:hover {
-            background: rgba(19, 136, 125, 0.02);
-        }
+ .restriction-icon {
+     margin-right: 15px;
+     margin-top: 2px;
+ }
+
+ .restriction-icon i {
+     color: #f44336;
+     font-size: 1.2rem;
+ }
+
+ .restriction-text strong {
+     color: var(--primary-navy);
+     display: block;
+     margin-bottom: 5px;
+     font-size: 1rem;
+ }
+
+ .restriction-text p {
+     margin: 0;
+     color: #666;
+     line-height: 1.5;
+ }
+
+ .important-note {
+     display: flex;
+     align-items: flex-start;
+     background: rgba(255, 193, 7, 0.1);
+     padding: 20px;
+     border-radius: 12px;
+     border-left: 4px solid #ffc107;
+     margin-top: 25px;
+ }
+
+ .important-note i {
+     color: #ff9800;
+     margin-right: 12px;
+     margin-top: 2px;
+     font-size: 1.2rem;
+ }
+
+ .important-note p {
+     margin: 0;
+     color: #666;
+     line-height: 1.6;
+ }
+
+ .warning-text {
+     font-size: 1.1rem;
+     color: #d32f2f;
+     margin-bottom: 20px;
+     font-weight: 500;
+ }
+
+ .conclusion-box {
+     background: linear-gradient(135deg, var(--neutral-bg), var(--white));
+     padding: 25px;
+     border-radius: 15px;
+     margin-top: 25px;
+     border: 2px solid var(--accent-teal);
+     display: flex;
+     align-items: flex-start;
+ }
+
+ .conclusion-icon {
+     margin-right: 15px;
+     margin-top: 2px;
+ }
+
+ .conclusion-icon i {
+     color: var(--accent-teal);
+     font-size: 1.5rem;
+ }
+
+ .conclusion-box p {
+     margin: 0;
+     color: var(--primary-navy);
+     font-weight: 500;
+     line-height: 1.6;
+ }
+
+ .defences-section {
+     margin: 80px 0;
+     margin-left: 50px;
+     margin-right: 50px;
+ }
+
+
+ .defences-table-container {
+     background: var(--white);
+     border-radius: 20px;
+     padding: 0;
+     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     border: 1px solid rgba(19, 136, 125, 0.1);
+ }
+
+ .eviction-table {
+     width: 100%;
+     border-collapse: collapse;
+     margin: 0;
+     font-size: 1rem;
+ }
+
+ .eviction-table thead {
+     background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
+     color: var(--white);
+ }
+
+ .eviction-table th {
+     padding: 25px 30px;
+     text-align: left;
+     font-weight: 600;
+     font-size: 1.2rem;
+     border: none;
+ }
+
+ .tenancy-header {
+     background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
+ }
+
+ .non-tenancy-header {
+     background: linear-gradient(135deg, var(--accent-teal), #16a085);
+ }
+
+ .eviction-table td {
+     padding: 0;
+     border: 1px solid rgba(19, 136, 125, 0.1);
+     vertical-align: top;
+ }
+
+ .defence-item {
+     padding: 25px 30px;
+     height: 100%;
+     transition: all 0.3s ease;
+     position: relative;
+ }
+
+ .defence-item:hover {
+     /* background: rgba(19, 136, 125, 0.03); */
+     background-color: #f9f1d6;
+ }
+
+ .defence-item strong {
+     color: var(--primary-navy);
+     font-size: 1.1rem;
+     display: block;
+     margin-bottom: 8px;
+ }
+
+ .defence-item p {
+     color: #666;
+     margin: 0;
+     line-height: 1.6;
+ }
+
+ .defence-item.non-unique em {
+     color: #888;
+     font-style: italic;
+ }
+
+ .eviction-table tr:nth-child(even) {
+     background: rgba(247, 248, 250, 0.3);
+ }
+
+ .eviction-table tr:hover {
+     background: rgba(19, 136, 125, 0.02);
+ }

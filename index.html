@@ -14,11 +14,12 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>
-
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>          
+                    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -45,8 +46,26 @@
                     <i class="fas fa-phone "></i>
                     Call Free: 0800 123 4567
                 </a> -->
+                <button id="searchToggle" class="search-button me-3">
+                        <i class="fas fa-search me-2"></i> Search
+                    </button>
                 <a href="#contact" class="cta-button">Start My Eviction</a>
             </div>
+             <!-- Mobile Search Bar -->
+        <div id="mobileSearch" style="position: absolute; top: 70px; left: 20px; right: 20px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 15px; padding: 15px; transform: translateY(-20px); opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <form style="display: flex; gap: 10px; align-items: center;">
+                <input 
+                    type="text" 
+                    id="mobileSearchInput" 
+                    placeholder="Search through the guide..." 
+                    style="flex: 1; padding: 12px 15px; border: 2px solid var(--accent-teal); border-radius: 25px; font-size: 16px; outline: none; color: var(--body-text);"
+                >
+                <button type="submit" style="background: var(--accent-teal); color: white; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                    <i class="fas fa-search"></i>
+                    <span class="d-none d-sm-inline">Next</span>
+                </button>
+            </form>
+        </div>
         </div>
     </nav>
 
@@ -234,8 +253,93 @@
         </div>
     </section>
 
+    <!-- Section 21 Section -->
+        <div class="section-21-section">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fa-solid fa-bolt me-2" style="color: orangered;"></i> Accelerated Possession Process</h2>
+                    <p class="section-description">Section 21 offers the fastest legal route for landlords to regain possession, but strict compliance requirements must be met.</p>
+                </div>
+
+                <div class="accelerated-grid">
+                    <div class="accelerated-card">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-rocket me-2 card-icon"></i>Faster Eviction Process</h3>
+                        </div>
+                        <div class="accelerated-content">
+                            <p class="lead-text">Landlords can use the accelerated possession procedure with a valid Section 21 notice when there are no rent arrears.</p>
+                            
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>Paper-based process</strong> - No court attendance required in most cases</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>Quicker resolution</strong> - Often avoids full hearing procedures</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span><strong>Cost effective</strong> - Lower court fees than standard possession claims</span>
+                                </div>
+                            </div>
+
+                            <div class="important-note">
+                                <i class="fas fa-info-circle"></i>
+                                <p><strong>Important:</strong> The court may still list a hearing if documents are incomplete, a tenant files a defence, or the judge requires further clarification.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="restrictions-card">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-exclamation-triangle me-2 card-icon warning"></i>Critical Restrictions</h3>
+                        </div>
+                        <div class="restrictions-content">
+                            <p>A Section 21 notice will be invalid if any of these conditions apply:</p>
+                            
+                            <div class="restrictions-list">
+                                <div class="restriction-item">
+                                    <div class="restriction-icon">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="restriction-text">
+                                        <strong>Deposit Protection Issues</strong>
+                                        <p>The deposit is not protected in a government-approved scheme</p>
+                                    </div>
+                                </div>
+                                <div class="restriction-item">
+                                    <div class="restriction-icon">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="restriction-text">
+                                        <strong>Missing Prescribed Information</strong>
+                                        <p>Prescribed information was not served correctly to the tenant</p>
+                                    </div>
+                                </div>
+                                <div class="restriction-item">
+                                    <div class="restriction-icon">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="restriction-text">
+                                        <strong>Retaliatory Eviction Prevention</strong>
+                                        <p>A local authority has issued an improvement or repair notice</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="conclusion-box">
+                                <div class="conclusion-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <p><strong>Section 21 is the fastest legal route</strong> for landlords in England & Wales to regain possession — but only if all compliance steps are met and the notice is served correctly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     <!-- Section 21 -->
-    <section class="py-5" id="services">
+    <section  id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 ">
@@ -249,17 +353,29 @@
                             <h3 class="mb-2">When You Can Use Section 21</h3>
                             <ul class="checklist">
                                 <li>
-                                    <span class="check-icon"><i class="fas fa-check"></i></span>
-                                    End of fixed term or during periodic tenancy
-                                </li>
-                                <li>
-                                    <span class="check-icon"><i class="fas fa-check"></i></span>
-                                    To sell or re-occupy the property
-                                </li>
-                                <li>
-                                    <span class="check-icon"><i class="fas fa-check"></i></span>
-                                    Where tenancy documents are fully compliant
-                                </li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        End of fixed term or during a periodic tenancy
+    </li>
+    <li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        To sell or re-occupy the rental property
+    </li>
+    <li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        Where tenancy documents are fully compliant
+    </li>
+    <li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        When landlords need vacant possession without proving tenant fault
+    </li>
+    <li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        For assured shorthold tenancies (ASTs) in England and Wales
+    </li>
+    <li>
+        <span class="check-icon"><i class="fas fa-check"></i></span>
+        When serving at least two months’ written notice to the tenant
+    </li>
                             </ul>
                         </div>
                     </div>
@@ -299,7 +415,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Section 8 -->
     <section class="section-alt py-5">
@@ -495,8 +610,6 @@
         </div>
     </section>
 
-
-
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
@@ -568,6 +681,7 @@
             </div>
         </div>
     </section>
+    <!-- Defences Section -->
     <section class="defences-section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-shield-halved me-2"></i> Common Defences to Eviction</h2>
@@ -817,6 +931,7 @@
             </div>
         </div>
     </section>
+
     <!-- Testimonial Carousel Section -->
     <div class="mt-2 p-3">
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -954,8 +1069,6 @@
             </div>
         </div>
     </section>
-
-    
 
     <!-- Contact Form -->
     <section class="section section-alt mt-4" id="contact">
