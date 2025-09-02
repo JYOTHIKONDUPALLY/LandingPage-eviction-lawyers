@@ -11,66 +11,121 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>          
-                    
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+<nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>          
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="d-none d-lg-flex align-items-center me-3">
+            <button id="searchToggle" class="search-button me-3">
+                <i class="fas fa-search me-2"></i> Search
             </button>
-            
+            <a href="#contact" class="cta-button">Start My Eviction</a>
+        </div>
+    </div>
+</nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#process">Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Our Prices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+<!-- Mobile Header -->
+<nav class="navbar navbar-dark bg-dark fixed-top d-lg-none flex-column p-0">
+    <div class="d-flex align-items-center justify-content-between w-100 px-3 py-2">
+        <a class="navbar-brand m-0" href="#">
+            <i class="fa-solid fa-scale-balanced me-1"></i> SLS Solicitors
+        </a>
+
+        <div class="d-flex align-items-center">
+            <button id="mobileSearchToggle" class="btn btn-link text-white p-0 me-3">
+                <i class="fas fa-search fa-lg"></i>
+            </button>  
+            <span class="me-2" style="width:1px; height:30px; background:#fff; display:inline-block;"></span> 
+            <span class="text-white me-2">MENU</span> 
+            <button id="mobileMenuToggle" class="btn btn-link text-white p-0">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+        <!-- Search Bar - Moved outside navbar for better positioning -->
+<div id="mobileSearch">
+    <form>
+        <input 
+            type="text" 
+            id="mobileSearchInput" 
+            placeholder="Search through the guide..." 
+        >
+        <!-- <button type="submit" class="search-submit-btn">
+            <i class="fas fa-search"></i>
+            <span class="d-none d-sm-inline">Next</span>
+        </button> -->
+        <button type="button" id="closeSearchBtn" class="search-submit-btn">
+                <i class="fas fa-times me-1"></i><span class="d-none d-sm-inline">Close</span>
+            </button>
+            <button type="button" id="clearSearchBtn" class="search-submit-btn">
+                <i class="fas fa-times me-1"></i>Clear
+            </button>
+    </form>
+    
+    <!-- Search Results Navigation - Shows when there are multiple results -->
+    <div id="searchResultsNav" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="search-result-info">
+                <span id="searchResultCounter">0 of 0</span>
+                <small class="text-muted ms-2">results</small>
             </div>
-            <!-- Desktop Contact Info -->
-            <div class="d-none d-lg-flex align-items-center me-3">
-                <!-- <a href="tel:08001234567" class="header-contact me-3">
-                    <i class="fas fa-phone "></i>
-                    Call Free: 0800 123 4567
-                </a> -->
-                <button id="searchToggle" class="search-button me-3">
-                        <i class="fas fa-search me-2"></i> Search
-                    </button>
-                <a href="#contact" class="cta-button">Start My Eviction</a>
-            </div>
-             <!-- Mobile Search Bar -->
-        <div id="mobileSearch" style="position: absolute; top: 70px; left: 20px; right: 20px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-radius: 15px; padding: 15px; transform: translateY(-20px); opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            <form style="display: flex; gap: 10px; align-items: center;">
-                <input 
-                    type="text" 
-                    id="mobileSearchInput" 
-                    placeholder="Search through the guide..." 
-                    style="flex: 1; padding: 12px 15px; border: 2px solid var(--accent-teal); border-radius: 25px; font-size: 16px; outline: none; color: var(--body-text);"
-                >
-                <button type="submit" style="background: var(--accent-teal); color: white; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; display: flex; align-items: center; gap: 5px;">
-                    <i class="fas fa-search"></i>
-                    <span class="d-none d-sm-inline">Next</span>
+            <div class="search-nav-buttons">
+                <button type="button" id="prevResultBtn" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="fas fa-chevron-up"></i>
+                    <span class="d-none d-md-inline ms-1">Previous</span>
                 </button>
-            </form>
+                <button type="button" id="nextResultBtn" class="btn btn-primary btn-sm">
+                    <i class="fas fa-chevron-down"></i>
+                    <span class="d-none d-md-inline ms-1">Next</span>
+                </button>
+                
+            </div>
         </div>
-        </div>
-    </nav>
+        
+        <!-- Search options -->
+        <!-- <div class="mt-2 d-flex justify-content-between align-items-center">
+            <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary btn-sm">
+                <i class="fas fa-times me-1"></i>Clear
+            </button>
+        </div> -->
+    </div>
+</div>
+<!-- ================== TOP DRAWER MENU ================== -->
+<div id="mobileMenuDrawer" class="mobile-drawer">
+  <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+    <h5 class="m-0">Menu</h5>
+    <button id="mobileMenuClose" class="btn btn-link p-0"style="color: var(--white);">
+      <i class="fas fa-times fa-lg"></i>
+    </button>
+  </div>
+  <ul class="navbar-nav p-3" >
+    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+    <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+  </ul>
+</div>
+ <!-- Action Buttons -->
+  <div class="header-actions d-flex w-100 d-lg-none">
+    <a href="#contact" class="cta-button w-50 rounded-0">Contact us</a>
+    <a href="#clients" class="cta-button-white w-50 rounded-0">Existing clients</a>
+  </div>
 
     <!-- Mobile CTA Banner -->
-    <div class="mobile-cta-banner d-md-none">
+    <div class=" d-none d-lg-block mobile-cta-banner d-md-none">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-8">
@@ -1376,13 +1431,16 @@
                 }
             });
         });
-
+const contactForm = document.querySelector('form');
         // Form submission handling
-        document.querySelector('form').addEventListener('submit', function (e) {
+        if(contactForm){
+contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for your inquiry! We will contact you within 24 hours to discuss your eviction case.');
         });
 
+        }
+        
         // Show/hide fixed CTA based on scroll
         window.addEventListener('scroll', function () {
             const fixedCta = document.getElementById('fixedCta');
@@ -1438,283 +1496,363 @@
             observer.observe(card);
         });
 
-        //navbar and search function
-        let searchResults = [];
-        let currentResultIndex = 0;
-        let originalHTML = '';
-
-        // Store original content on page load
-        window.addEventListener('load', function () {
-            originalHTML = document.body.innerHTML;
-        });
-
-        // Toggle search bar
-        document.getElementById("searchToggle").addEventListener("click", function () {
-            let searchBar = document.getElementById("mobileSearch");
-            searchBar.classList.toggle("show");
-            if (searchBar.classList.contains("show")) {
-                document.getElementById("mobileSearchInput").focus();
-                showSearchNavigation();
-            } else {
-                clearSearchHighlights();
-                hideSearchNavigation();
-            }
-        });
-
-        // Real-time search as user types
-        document.getElementById("mobileSearchInput").addEventListener("input", function (e) {
-            const query = e.target.value.trim();
-            if (query.length >= 2) { // Start searching after 2 characters
-                performSearch(query);
-            } else {
-                clearSearchHighlights();
-                hideSearchNavigation();
-            }
-        });
-
-        // Search on enter - navigate to next result
-        document.getElementById("mobileSearch").addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (searchResults.length > 0) {
-                navigateToResult('next');
-            }
-        });
-
-        function performSearch(query) {
-            clearSearchHighlights();
-
-            if (!query) return;
-
-            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-            searchResults = [];
-
-            // Get all text nodes
-            const walker = document.createTreeWalker(
-                document.body,
-                NodeFilter.SHOW_TEXT,
-                {
-                    acceptNode: function (node) {
-                        // Skip script and style elements
-                        const parent = node.parentElement;
-                        if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
-                            return NodeFilter.FILTER_REJECT;
-                        }
-                        return NodeFilter.FILTER_ACCEPT;
-                    }
-                }
-            );
-
-            const textNodes = [];
-            let node;
-            while (node = walker.nextNode()) {
-                if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
-                    textNodes.push(node);
-                }
-            }
-
-            // Highlight matching text
-            textNodes.forEach(textNode => {
-                const parent = textNode.parentNode;
-                const text = textNode.textContent;
-
-                if (regex.test(text)) {
-                    const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
-                    const wrapper = document.createElement('span');
-                    wrapper.innerHTML = highlightedHTML;
-
-                    parent.replaceChild(wrapper, textNode);
-
-                    // Collect all highlights for navigation
-                    const highlights = wrapper.querySelectorAll('.search-highlight');
-                    highlights.forEach(highlight => {
-                        searchResults.push(highlight);
-                    });
-                }
-            });
-
-            // Update search counter and navigate to first result
-            updateSearchUI();
-            if (searchResults.length > 0) {
-                currentResultIndex = 0;
-                scrollToResult(searchResults[currentResultIndex]);
-                showSearchNavigation();
-            } else {
-                hideSearchNavigation();
-            }
-        }
-
-        function clearSearchHighlights() {
-            // Remove all highlights
-            const highlights = document.querySelectorAll('.search-highlight');
-            highlights.forEach(highlight => {
-                const parent = highlight.parentNode;
-                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
-                parent.normalize(); // Merge adjacent text nodes
-            });
-
-            // Remove empty span wrappers
-            const emptySpans = document.querySelectorAll('span:empty');
-            emptySpans.forEach(span => span.remove());
-
-            searchResults = [];
-            currentResultIndex = 0;
-            updateSearchUI();
-        }
-
-        function navigateToResult(direction) {
-            if (searchResults.length === 0) return;
-
-            if (direction === 'next') {
-                currentResultIndex = (currentResultIndex + 1) % searchResults.length;
-            } else if (direction === 'prev') {
-                currentResultIndex = currentResultIndex === 0 ? searchResults.length - 1 : currentResultIndex - 1;
-            }
-
-            scrollToResult(searchResults[currentResultIndex]);
-            updateSearchUI();
-        }
-
-        function scrollToResult(element) {
-            // Remove previous active highlight
-            document.querySelectorAll('.search-highlight.active').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // Add active class to current result
-            element.classList.add('active');
-
-            // Scroll to element
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "nearest"
-            });
-        }
-
-        function updateSearchUI() {
-            // Update counter in the fixed navigation
-            const counter = document.getElementById('searchCounter');
-            if (counter && searchResults.length > 0) {
-                counter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
-            } else if (counter) {
-                counter.textContent = '';
-            }
-            console.log(`Search results: ${currentResultIndex + 1} of ${searchResults.length}`);
-        }
-
-        function escapeRegExp(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
-
-        // Create fixed search navigation
-        function createFixedSearchNavigation() {
-            // Check if navigation already exists
-            if (document.getElementById('fixedSearchNav')) return;
-
-            const navContainer = document.createElement('div');
-            navContainer.id = 'fixedSearchNav';
-            navContainer.style.cssText = `
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 15px;
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 10000;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        min-width: 60px;
-        align-items: center;
-    `;
-
-            navContainer.innerHTML = `
-        <button type="button" id="searchPrevBtn" onclick="navigateToResult('prev')" 
-                style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
-            ↑
-        </button>
-        <div id="searchCounter" style="color: white; font-size: 12px; text-align: center; min-height: 20px; font-weight: bold;"></div>
-        <button type="button" id="searchNextBtn" onclick="navigateToResult('next')" 
-                style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
-            ↓
-        </button>
-        <button type="button" id="closeSearchNav" onclick="hideSearchNavigation()" 
-                style="padding: 8px; background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-top: 5px;">
-            ×
-        </button>
-    `;
-
-            document.body.appendChild(navContainer);
-
-            // Add hover effects
-            const buttons = navContainer.querySelectorAll('button');
-            buttons.forEach(btn => {
-                btn.addEventListener('mouseenter', function () {
-                    if (this.id !== 'closeSearchNav') {
-                        this.style.background = 'var(--accent-teal-dark, #188B8B)';
-                        this.style.transform = 'scale(1.1)';
-                    } else {
-                        this.style.background = 'rgba(255, 255, 255, 0.3)';
-                    }
-                });
-                btn.addEventListener('mouseleave', function () {
-                    if (this.id !== 'closeSearchNav') {
-                        this.style.background = 'var(--accent-teal, #20B2AA)';
-                        this.style.transform = 'scale(1)';
-                    } else {
-                        this.style.background = 'rgba(255, 255, 255, 0.2)';
-                    }
-                });
-            });
-        }
-
-        function showSearchNavigation() {
-            const nav = document.getElementById('fixedSearchNav');
-            if (nav && searchResults.length > 0) {
-                nav.style.display = 'flex';
-            }
-        }
-
-        function hideSearchNavigation() {
-            const nav = document.getElementById('fixedSearchNav');
-            if (nav) {
-                nav.style.display = 'none';
-            }
-        }
-
-        // Initialize fixed navigation on page load
-        window.addEventListener('load', function () {
-            createFixedSearchNavigation();
-        });
-
-        // Add keyboard shortcuts for navigation
-        document.addEventListener('keydown', function (e) {
-            // Only work when search is active
-            const searchBar = document.getElementById("mobileSearch");
-            if (!searchBar || !searchBar.classList.contains("show") || searchResults.length === 0) return;
-
-            // F3 or Enter for next result
-            if (e.key === 'F3' || (e.key === 'Enter' && e.target.id !== 'mobileSearchInput')) {
-                e.preventDefault();
-                navigateToResult('next');
-            }
-            // Shift + F3 for previous result
-            else if (e.key === 'F3' && e.shiftKey) {
-                e.preventDefault();
-                navigateToResult('prev');
-            }
-            // Escape to close search
-            else if (e.key === 'Escape') {
-                searchBar.classList.remove("show");
-                clearSearchHighlights();
-                hideSearchNavigation();
-            }
-        });
-
     </script>
+    <!-- ================== SCRIPT ================== -->
+<script>
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+  const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+
+  mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuDrawer.classList.add('open');
+  });
+
+  mobileMenuClose.addEventListener('click', () => {
+    mobileMenuDrawer.classList.remove('open');
+  });
+</script>
+<script>
+// Your fixed JavaScript goes here
+let searchResults = [];
+let currentResultIndex = 0;
+let originalHTML = '';
+
+// Store original content on page load
+window.addEventListener('load', function () {
+    originalHTML = document.body.innerHTML;
+    // createFixedSearchNavigation();
+});
+
+// Function to toggle search (works for both desktop and mobile)
+function toggleSearch() {
+    let searchBar = document.getElementById("mobileSearch");
+    console.log('Toggle search clicked', searchBar); // Debug log
+    
+    if (searchBar) {
+        searchBar.classList.toggle("show");
+        if (searchBar.classList.contains("show")) {
+            console.log('Search bar shown'); // Debug log
+            document.getElementById("mobileSearchInput").focus();
+            showSearchNavigation();
+            // Show results nav if there are existing results
+            if (searchResults.length > 0) {
+                showSearchResultsNav();
+            }
+        } else {
+            console.log('Search bar hidden'); // Debug log
+            clearSearchHighlights();
+            hideSearchNavigation();
+            hideSearchResultsNav();
+        }
+    } else {
+        console.error('Search bar not found!');
+    }
+}
+
+// Desktop search toggle
+const desktopSearchToggle = document.getElementById("searchToggle");
+if (desktopSearchToggle) {
+    desktopSearchToggle.addEventListener("click", toggleSearch);
+    console.log('Desktop search button found and connected');
+}
+
+// Mobile search toggle
+const mobileSearchToggle = document.getElementById("mobileSearchToggle");
+if (mobileSearchToggle) {
+    mobileSearchToggle.addEventListener("click", toggleSearch);
+    console.log('Mobile search button found and connected');
+}
+
+// Real-time search as user types
+const searchInput = document.getElementById("mobileSearchInput");
+if (searchInput) {
+    searchInput.addEventListener("input", function (e) {
+        const query = e.target.value.trim();
+        console.log('Search query:', query); // Debug log
+        if (query.length >= 2) {
+            performSearch(query);
+        } else {
+            clearSearchHighlights();
+            hideSearchNavigation();
+            hideSearchResultsNav();
+        }
+    });
+}
+
+// Navigation button event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prevResultBtn');
+    const nextBtn = document.getElementById('nextResultBtn');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const closeBtn = document.getElementById('closeSearchBtn');
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => navigateToResult('prev'));
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => navigateToResult('next'));
+    }
+    
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            clearSearchHighlights();
+            hideSearchNavigation();
+            hideSearchResultsNav();
+            document.getElementById('mobileSearchInput').value = '';
+        });
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            // Hide search bar
+            const searchBar = document.getElementById('mobileSearch');
+            if (searchBar) {
+                searchBar.classList.remove("show");
+            }
+            // Reset everything
+            clearSearchHighlights();
+            hideSearchNavigation();
+            hideSearchResultsNav();
+            document.getElementById('mobileSearchInput').value = '';
+        });
+    }
+});
+
+// Search form submission
+// const searchForm = document.querySelector('#mobileSearch form');
+// if (searchForm) {
+//     searchForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
+//         if (searchResults.length > 0) {
+//             navigateToResult('next');
+//         } else {
+//             const query = document.getElementById('mobileSearchInput').value.trim();
+//             if (query.length >= 2) {
+//                 performSearch(query);
+//             }
+//         }
+//     });
+// }
+
+// Rest of your JavaScript functions remain the same...
+function performSearch(query) {
+    clearSearchHighlights();
+    if (!query) return;
+
+    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+    searchResults = [];
+
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function (node) {
+                const parent = node.parentElement;
+                if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
+            textNodes.push(node);
+        }
+    }
+
+    textNodes.forEach(textNode => {
+        const parent = textNode.parentNode;
+        const text = textNode.textContent;
+
+        if (regex.test(text)) {
+            const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+            const wrapper = document.createElement('span');
+            wrapper.innerHTML = highlightedHTML;
+
+            parent.replaceChild(wrapper, textNode);
+
+            const highlights = wrapper.querySelectorAll('.search-highlight');
+            highlights.forEach(highlight => {
+                searchResults.push(highlight);
+            });
+        }
+    });
+
+    console.log('Search results found:', searchResults.length); // Debug log
+    updateSearchUI();
+    if (searchResults.length > 0) {
+        currentResultIndex = 0;
+        scrollToResult(searchResults[currentResultIndex]);
+        showSearchNavigation();
+        showSearchResultsNav();
+    } else {
+        hideSearchNavigation();
+        hideSearchResultsNav();
+    }
+}
+
+function clearSearchHighlights() {
+    const highlights = document.querySelectorAll('.search-highlight');
+    highlights.forEach(highlight => {
+        const parent = highlight.parentNode;
+        parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+        parent.normalize();
+    });
+
+    const emptySpans = document.querySelectorAll('span:empty');
+    emptySpans.forEach(span => span.remove());
+
+    searchResults = [];
+    currentResultIndex = 0;
+    updateSearchUI();
+}
+
+function navigateToResult(direction) {
+    if (searchResults.length === 0) return;
+
+    if (direction === 'next') {
+        currentResultIndex = (currentResultIndex + 1) % searchResults.length;
+    } else if (direction === 'prev') {
+        currentResultIndex = currentResultIndex === 0 ? searchResults.length - 1 : currentResultIndex - 1;
+    }
+
+    scrollToResult(searchResults[currentResultIndex]);
+    updateSearchUI();
+}
+
+function scrollToResult(element) {
+    document.querySelectorAll('.search-highlight.active').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    element.classList.add('active');
+
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+    });
+}
+
+function updateSearchUI() {
+    // Update counter in the fixed navigation
+    const counter = document.getElementById('searchCounter');
+    if (counter && searchResults.length > 0) {
+        counter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
+    } else if (counter) {
+        counter.textContent = '';
+    }
+    
+    // Update counter in the search results nav
+    const resultCounter = document.getElementById('searchResultCounter');
+    if (resultCounter) {
+        if (searchResults.length > 0) {
+            resultCounter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
+        } else {
+            resultCounter.textContent = '0 of 0';
+        }
+    }
+    
+    // Update navigation buttons
+    updateNavigationButtons();
+}
+
+function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prevResultBtn');
+    const nextBtn = document.getElementById('nextResultBtn');
+    
+    if (prevBtn && nextBtn) {
+        // Disable/enable buttons based on current position
+        prevBtn.disabled = searchResults.length === 0 || currentResultIndex === 0;
+        nextBtn.disabled = searchResults.length === 0 || currentResultIndex === searchResults.length - 1;
+        
+        // For circular navigation, always enable if there are results
+        if (searchResults.length > 1) {
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+        }
+    }
+}
+
+function showSearchResultsNav() {
+    const nav = document.getElementById('searchResultsNav');
+    if (nav && searchResults.length > 0) {
+        nav.style.display = 'block';
+        updateNavigationButtons();
+    }
+}
+
+function hideSearchResultsNav() {
+    const nav = document.getElementById('searchResultsNav');
+    if (nav) {
+        nav.style.display = 'none';
+    }
+}
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// function createFixedSearchNavigation() {
+//     if (document.getElementById('fixedSearchNav')) return;
+
+//     const navContainer = document.createElement('div');
+//     navContainer.id = 'fixedSearchNav';
+//     navContainer.style.cssText = `
+//         position: fixed;
+//         top: 50%;
+//         right: 20px;
+//         transform: translateY(-50%);
+//         background: rgba(0, 0, 0, 0.8);
+//         backdrop-filter: blur(10px);
+//         border-radius: 10px;
+//         padding: 15px;
+//         display: none;
+//         flex-direction: column;
+//         gap: 10px;
+//         z-index: 10000;
+//         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+//         min-width: 60px;
+//         align-items: center;
+//     `;
+
+//     navContainer.innerHTML = `
+//         <button type="button" onclick="navigateToResult('prev')" 
+//                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+//             ↑
+//         </button>
+//         <div id="searchCounter" style="color: white; font-size: 12px; text-align: center; min-height: 20px; font-weight: bold;"></div>
+//         <button type="button" onclick="navigateToResult('next')" 
+//                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+//             ↓
+//         </button>
+//         <button type="button" onclick="hideSearchNavigation()" 
+//                 style="padding: 8px; background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+//             ×
+//         </button>
+//     `;
+
+//     document.body.appendChild(navContainer);
+// }
+
+function showSearchNavigation() {
+    const nav = document.getElementById('fixedSearchNav');
+    if (nav && searchResults.length > 0) {
+        nav.style.display = 'flex';
+    }
+}
+
+function hideSearchNavigation() {
+    const nav = document.getElementById('fixedSearchNav');
+    if (nav) {
+        nav.style.display = 'none';
+    }
+}
+</script>
 </body>
 
 </html>
