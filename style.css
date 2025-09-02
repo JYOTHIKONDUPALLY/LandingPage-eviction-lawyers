@@ -453,11 +453,11 @@
      background-color: var(--neutral-bg);
  }
 
- .container {
+ /* .container {
      max-width: 1200px;
      margin: 0 auto;
      padding: 0 1rem;
- }
+ } */
 
  .section-title {
      text-align: center;
@@ -767,7 +767,7 @@
   width: 100%;
   background: var(--accent-teal); /* teal-like background */
   z-index: 9999;
-  height: 70px;
+  /* height: 70px; */
 }
 
 .cta-nav {
