@@ -786,7 +786,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   background: var(--accent-teal); /* same background */
 }
 
