@@ -767,6 +767,7 @@
   width: 100%;
   background: var(--accent-teal); /* teal-like background */
   z-index: 9999;
+  height: 70px;
 }
 
 .cta-nav {
