@@ -227,9 +227,10 @@
 
  /* Stats */
  .hero-stats {
-     display: flex;
-     gap: 2rem;
-     margin: 2rem 0;
+       display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 2rem;
+  margin: 2rem 0;
  }
 
  .stat-item {
@@ -806,8 +807,7 @@
      }
 
      .hero-stats {
-         justify-content: center;
-         flex-wrap: wrap;
+          grid-template-columns: repeat(2, 1fr); /* 2 columns */
      }
 
      .experience-cards {
