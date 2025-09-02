@@ -1255,20 +1255,20 @@
  }
 
  .section-21-section {
-     margin: 80px 40px;
+     margin: 40px 20px;
  }
 
  .section-description {
      font-size: 1.2rem;
      color: #666;
-     max-width: 600px;
-     margin: 15px auto;
+     /* max-width: 600px; */
+     margin: 10px auto;
  }
 
  .accelerated-grid {
      display: flex;
      justify-content: space-between;
-        gap: 30px;
+        gap: 20px;
  }
 
  .accelerated-card,
@@ -1322,17 +1322,17 @@
 
  .benefits-list,
  .restrictions-list {
-     margin: 25px 0;
+     /* margin: 15px 0; */
  }
 
  .benefit-item {
      display: flex;
      align-items: flex-start;
      margin-bottom: 15px;
-     padding: 12px;
-     background: rgba(76, 175, 80, 0.05);
+     /* padding: 12px; */
+     /* background: rgba(76, 175, 80, 0.05); */
      border-radius: 10px;
-     border-left: 3px solid #4caf50;
+     /* border-left: 3px solid #4caf50; */
  }
 
  .benefit-item i {
@@ -1346,10 +1346,10 @@
      display: flex;
      align-items: flex-start;
      margin-bottom: 20px;
-     padding: 15px;
-     background: rgba(255, 87, 34, 0.05);
+     /* padding: 15px; */
+     /* background: rgba(255, 87, 34, 0.05); */
      border-radius: 10px;
-     border-left: 3px solid #ff5722;
+     /* border-left: 3px solid #ff5722; */
  }
 
  .restriction-icon {
@@ -1406,11 +1406,11 @@
  }
 
  .conclusion-box {
-     background: linear-gradient(135deg, var(--neutral-bg), var(--white));
-     padding: 25px;
+     /* background: linear-gradient(135deg, var(--neutral-bg), var(--white)); */
+     /* padding: 25px; */
      border-radius: 15px;
      margin-top: 25px;
-     border: 2px solid var(--accent-teal);
+     /* border: 2px solid var(--accent-teal); */
      display: flex;
      align-items: flex-start;
  }
@@ -1450,9 +1450,9 @@
 
  .eviction-table {
      width: 100%;
-     border-collapse: collapse;
+     /* border-collapse: collapse; */
      margin: 0;
-     font-size: 1rem;
+     /* font-size: 1rem; */
  }
 
  .eviction-table thead {
@@ -1476,11 +1476,11 @@
      background: linear-gradient(135deg, var(--accent-teal), #16a085);
  }
 
- .eviction-table td {
+ /* .eviction-table td {
      padding: 0;
      border: 1px solid rgba(19, 136, 125, 0.1);
      vertical-align: top;
- }
+ } */
 
  .defence-item {
      padding: 25px 30px;
