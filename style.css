@@ -1461,10 +1461,10 @@
  }
 
  .eviction-table th {
-     padding: 25px 30px;
+     /* padding: 25px 30px; */
      text-align: left;
      font-weight: 600;
-     font-size: 1.2rem;
+     /* font-size: 1.2rem; */
      border: none;
  }
 
