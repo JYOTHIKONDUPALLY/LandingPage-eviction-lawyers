@@ -910,7 +910,7 @@
      background: var(--primary-navy);
      color: white;
      padding: 40px 0;
-     /* margin-bottom: 70px; */
+     margin-bottom: 30px;
  }
 
  footer a {
@@ -922,6 +922,17 @@
      color: white;
      text-decoration: underline;
  }
+ .small {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+
+  /* lg and above */
+  .small {
+    max-width: 400px;
+  }
+}
 
  .icoLogo {
      display: inline-flex;
