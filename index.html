@@ -11,123 +11,120 @@
 </head>
 
 <body>
-<nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>          
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-                <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        
-        <div class="d-none d-lg-flex align-items-center me-3">
-            <button id="searchToggle" class="search-button me-3">
-                <i class="fas fa-search me-2"></i> Search
-            </button>
-            <a href="#contact" class="cta-button">Start My Eviction</a>
-        </div>
-    </div>
-</nav>
+    <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>SLS Solicitors</a>
 
-<!-- Mobile Header -->
-<nav class="navbar navbar-dark bg-dark fixed-top d-lg-none flex-column p-0">
-    <div class="d-flex align-items-center justify-content-between w-100 px-3 py-2">
-        <a class="navbar-brand m-0" href="#">
-            <i class="fa-solid fa-scale-balanced me-1"></i> SLS Solicitors
-        </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
-        <div class="d-flex align-items-center">
-            <button id="mobileSearchToggle" class="btn btn-link text-white p-0 me-3">
-                <i class="fas fa-search fa-lg"></i>
-            </button>  
-            <span class="me-2" style="width:1px; height:30px; background:#fff; display:inline-block;"></span> 
-            <span class="text-white me-2">MENU</span> 
-            <button id="mobileMenuToggle" class="btn btn-link text-white p-0">
-                <i class="fas fa-bars fa-lg"></i>
-            </button>
+            <div class="d-none d-lg-flex align-items-center me-3">
+                <button id="searchToggle" class="search-button me-3">
+                    <i class="fas fa-search me-2"></i> Search
+                </button>
+                <a href="#contact" class="cta-button">Start My Eviction</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-        <!-- Search Bar - Moved outside navbar for better positioning -->
-<div id="mobileSearch">
-    <form>
-        <input 
-            type="text" 
-            id="mobileSearchInput" 
-            placeholder="Search through the guide..." 
-        >
-        <!-- <button type="submit" class="search-submit-btn">
+    <!-- Mobile Header -->
+    <nav class="navbar navbar-dark bg-dark fixed-top d-lg-none flex-column p-0">
+        <div class="d-flex align-items-center justify-content-between w-100 px-3 py-2">
+            <a class="navbar-brand m-0" href="#">
+                <i class="fa-solid fa-scale-balanced me-1"></i> SLS Solicitors
+            </a>
+
+            <div class="d-flex align-items-center">
+                <button id="mobileSearchToggle" class="btn btn-link text-white p-0 me-3">
+                    <i class="fas fa-search fa-lg"></i>
+                </button>
+                <span class="me-2" style="width:1px; height:30px; background:#fff; display:inline-block;"></span>
+                <span class="text-white me-2">MENU</span>
+                <button id="mobileMenuToggle" class="btn btn-link text-white p-0">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar - Moved outside navbar for better positioning -->
+    <div id="mobileSearch">
+        <form>
+            <input type="text" id="mobileSearchInput" placeholder="Search through the guide...">
+            <!-- <button type="submit" class="search-submit-btn">
             <i class="fas fa-search"></i>
             <span class="d-none d-sm-inline">Next</span>
         </button> -->
-        <div class="d-block d-lg-inline m-2 m-lg-0">
-        <button type="button" id="closeSearchBtn" class="search-submit-btn">
-    <i class="fas fa-times me-1"></i>
-    <span class="d-none d-sm-inline">Close</span>
-</button>
+            <div class="d-block d-lg-inline m-2 m-lg-0">
+                <button type="button" id="closeSearchBtn" class="search-submit-btn">
+                    <i class="fas fa-times me-1"></i>
+                    <span class="d-none d-sm-inline">Close</span>
+                </button>
 
-<button type="button" id="clearSearchBtn" class="search-submit-btn">
-    <i class="fas fa-eraser me-1"></i>
-    <span class="d-none d-sm-inline">Clear</span>
-</button>
-</div>
-    </form>
-    
-    <!-- Search Results Navigation - Shows when there are multiple results -->
-    <div id="searchResultsNav" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="search-result-info">
-                <span id="searchResultCounter">0 of 0</span>
-                <small class="text-muted ms-2">results</small>
-            </div>
-            <div class="search-nav-buttons">
-                <button type="button" id="prevResultBtn" class="btn btn-outline-primary btn-sm me-2">
-                    <i class="fas fa-chevron-up"></i>
-                    <span class="d-none d-md-inline ms-1">Previous</span>
+                <button type="button" id="clearSearchBtn" class="search-submit-btn">
+                    <i class="fas fa-eraser me-1"></i>
+                    <span class="d-none d-sm-inline">Clear</span>
                 </button>
-                <button type="button" id="nextResultBtn" class="btn btn-primary btn-sm">
-                    <i class="fas fa-chevron-down"></i>
-                    <span class="d-none d-md-inline ms-1">Next</span>
-                </button>
-                
             </div>
-        </div>
-        
-        <!-- Search options -->
-        <!-- <div class="mt-2 d-flex justify-content-between align-items-center">
+        </form>
+
+        <!-- Search Results Navigation - Shows when there are multiple results -->
+        <div id="searchResultsNav"
+            style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="search-result-info">
+                    <span id="searchResultCounter">0 of 0</span>
+                    <small class="text-muted ms-2">results</small>
+                </div>
+                <div class="search-nav-buttons">
+                    <button type="button" id="prevResultBtn" class="btn btn-outline-primary btn-sm me-2">
+                        <i class="fas fa-chevron-up"></i>
+                        <span class="d-none d-md-inline ms-1">Previous</span>
+                    </button>
+                    <button type="button" id="nextResultBtn" class="btn btn-primary btn-sm">
+                        <i class="fas fa-chevron-down"></i>
+                        <span class="d-none d-md-inline ms-1">Next</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Search options -->
+            <!-- <div class="mt-2 d-flex justify-content-between align-items-center">
             <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary btn-sm">
                 <i class="fas fa-times me-1"></i>Clear
             </button>
         </div> -->
+        </div>
     </div>
-</div>
-<!-- ================== TOP DRAWER MENU ================== -->
-<div id="mobileMenuDrawer" class="mobile-drawer">
-  <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
-    <h5 class="m-0">Menu</h5>
-    <button id="mobileMenuClose" class="btn btn-link p-0"style="color: var(--white);">
-      <i class="fas fa-times fa-lg"></i>
-    </button>
-  </div>
-  <ul class="navbar-nav p-3" >
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-    <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
-    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-  </ul>
-</div>
- <!-- Action Buttons -->
-  <div class="header-actions d-flex w-100 d-lg-none">
-    <a href="#contact" class="cta-button w-50 rounded-0">Contact us</a>
-    <a href="#clients" class="cta-button-white w-50 rounded-0">Existing clients</a>
-  </div>
+    <!-- ================== TOP DRAWER MENU ================== -->
+    <div id="mobileMenuDrawer" class="mobile-drawer">
+        <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+            <h5 class="m-0">Menu</h5>
+            <button id="mobileMenuClose" class="btn btn-link p-0" style="color: var(--white);">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+        </div>
+        <ul class="navbar-nav p-3">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Action Buttons -->
+    <div class="header-actions d-flex w-100 d-lg-none">
+        <a href="#contact" class="cta-button w-50 rounded-0">Contact us</a>
+        <a href="#clients" class="cta-button-white w-50 rounded-0">Existing clients</a>
+    </div>
 
     <!-- Mobile CTA Banner -->
     <div class=" d-none d-lg-block mobile-cta-banner d-md-none">
@@ -313,10 +310,10 @@
         </div>
     </section>
 
-  
+
 
     <!-- Section 21 -->
-    <section  id="services" class="py-2">
+    <section id="services" class="py-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 ">
@@ -330,29 +327,29 @@
                             <h3 class="mb-2">When You Can Use Section 21</h3>
                             <ul class="checklist">
                                 <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        End of fixed term or during a periodic tenancy
-    </li>
-    <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        To sell or re-occupy the rental property
-    </li>
-    <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        Where tenancy documents are fully compliant
-    </li>
-    <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        When landlords need vacant possession without proving tenant fault
-    </li>
-    <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        For assured shorthold tenancies (ASTs) in England and Wales
-    </li>
-    <li>
-        <span class="check-icon"><i class="fas fa-check"></i></span>
-        When serving at least two months’ written notice to the tenant
-    </li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    End of fixed term or during a periodic tenancy
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    To sell or re-occupy the rental property
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    Where tenancy documents are fully compliant
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    When landlords need vacant possession without proving tenant fault
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    For assured shorthold tenancies (ASTs) in England and Wales
+                                </li>
+                                <li>
+                                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                                    When serving at least two months’ written notice to the tenant
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -392,90 +389,99 @@
             </div>
         </div>
     </section>
-  <!-- Section 21 Section -->
-        <div class="section-21-section">
-                <div class="section-header">
-                    <h2 class="section-title"><i class="fa-solid fa-bolt me-2" style="color: orangered;"></i> Accelerated Possession Process</h2>
-                    <p class="section-description">Section 21 offers the fastest legal route for landlords to regain possession, but strict compliance requirements must be met.</p>
+    <!-- Section 21 Section -->
+    <div class="section-21-section">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fa-solid fa-bolt me-2" style="color: orangered;"></i> Accelerated
+                Possession Process</h2>
+            <p class="section-description">Section 21 offers the fastest legal route for landlords to regain possession,
+                but strict compliance requirements must be met.</p>
+        </div>
+
+        <div class="accelerated-grid">
+            <div class="accelerated-card">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-rocket me-2 card-icon"></i>Faster Eviction Process</h3>
                 </div>
+                <div class="accelerated-content">
+                    <p class="lead-text">Landlords can use the accelerated possession procedure with a valid Section 21
+                        notice when there are no rent arrears.</p>
 
-                <div class="accelerated-grid">
-                    <div class="accelerated-card">
-                        <div class="card-header">
-                            <h3 class="card-title"><i class="fas fa-rocket me-2 card-icon"></i>Faster Eviction Process</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Paper-based process</strong> - No court attendance required in most
+                                cases</span>
                         </div>
-                        <div class="accelerated-content">
-                            <p class="lead-text">Landlords can use the accelerated possession procedure with a valid Section 21 notice when there are no rent arrears.</p>
-                            
-                            <div class="benefits-list">
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span><strong>Paper-based process</strong> - No court attendance required in most cases</span>
-                                </div>
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span><strong>Quicker resolution</strong> - Often avoids full hearing procedures</span>
-                                </div>
-                                <div class="benefit-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span><strong>Cost effective</strong> - Lower court fees than standard possession claims</span>
-                                </div>
-                            </div>
-
-                            <div class="important-note">
-                                <i class="fas fa-info-circle"></i>
-                                <p><strong>Important:</strong> The court may still list a hearing if documents are incomplete, a tenant files a defence, or the judge requires further clarification.</p>
-                            </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Quicker resolution</strong> - Often avoids full hearing procedures</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>Cost effective</strong> - Lower court fees than standard possession
+                                claims</span>
                         </div>
                     </div>
 
-                    <div class="restrictions-card">
-                        <div class="card-header">
-                            <h3 class="card-title"><i class="fas fa-exclamation-triangle me-2 card-icon warning"></i>Critical Restrictions</h3>
-                        </div>
-                        <div class="restrictions-content">
-                            <p>A Section 21 notice will be invalid if any of these conditions apply:</p>
-                            
-                            <div class="restrictions-list">
-                                <div class="restriction-item">
-                                    <div class="restriction-icon">
-                                        <i class="fas fa-times-circle"></i>
-                                    </div>
-                                    <div class="restriction-text">
-                                        <strong>Deposit Protection Issues</strong>
-                                        <p>The deposit is not protected in a government-approved scheme</p>
-                                    </div>
-                                </div>
-                                <div class="restriction-item">
-                                    <div class="restriction-icon">
-                                        <i class="fas fa-times-circle"></i>
-                                    </div>
-                                    <div class="restriction-text">
-                                        <strong>Missing Prescribed Information</strong>
-                                        <p>Prescribed information was not served correctly to the tenant</p>
-                                    </div>
-                                </div>
-                                <div class="restriction-item">
-                                    <div class="restriction-icon">
-                                        <i class="fas fa-times-circle"></i>
-                                    </div>
-                                    <div class="restriction-text">
-                                        <strong>Retaliatory Eviction Prevention</strong>
-                                        <p>A local authority has issued an improvement or repair notice</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="conclusion-box">
-                                <div class="conclusion-icon">
-                                    <i class="fas fa-balance-scale"></i>
-                                </div>
-                                <p><strong>Section 21 is the fastest legal route</strong> for landlords in England & Wales to regain possession — but only if all compliance steps are met and the notice is served correctly.</p>
-                            </div>
-                        </div>
+                    <div class="important-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Important:</strong> The court may still list a hearing if documents are incomplete, a
+                            tenant files a defence, or the judge requires further clarification.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="restrictions-card">
+                <div class="card-header">
+                    <h3 class="card-title"><i class="fas fa-exclamation-triangle me-2 card-icon warning"></i>Critical
+                        Restrictions</h3>
+                </div>
+                <div class="restrictions-content">
+                    <p>A Section 21 notice will be invalid if any of these conditions apply:</p>
+
+                    <div class="restrictions-list">
+                        <div class="restriction-item">
+                            <div class="restriction-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="restriction-text">
+                                <strong>Deposit Protection Issues</strong>
+                                <p>The deposit is not protected in a government-approved scheme</p>
+                            </div>
+                        </div>
+                        <div class="restriction-item">
+                            <div class="restriction-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="restriction-text">
+                                <strong>Missing Prescribed Information</strong>
+                                <p>Prescribed information was not served correctly to the tenant</p>
+                            </div>
+                        </div>
+                        <div class="restriction-item">
+                            <div class="restriction-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="restriction-text">
+                                <strong>Retaliatory Eviction Prevention</strong>
+                                <p>A local authority has issued an improvement or repair notice</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-box">
+                        <div class="conclusion-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <p><strong>Section 21 is the fastest legal route</strong> for landlords in England & Wales to
+                            regain possession — but only if all compliance steps are met and the notice is served
+                            correctly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Section 8 -->
     <section class="section-alt py-1.5">
@@ -1004,7 +1010,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4 mt-2"><i class="fas fa-exclamation-triangle me-2"></i> Illegal Eviction – Avoid Criminal
+                    <h2 class="mb-4 mt-2"><i class="fas fa-exclamation-triangle me-2"></i> Illegal Eviction – Avoid
+                        Criminal
                         Liability</h2>
                     <p class="fs-5 mb-4">Landlords must never:</p>
 
@@ -1123,6 +1130,86 @@
                             <p>Yes. Even if you believe the occupier has no tenancy, changing locks without a possession
                                 order is illegal eviction. This can lead to criminal prosecution and compensation
                                 claims. The lawful way is through a possession order enforced by bailiffs or High Court
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span> Do I need to follow <a href="https://www.gov.uk/" target="_blank">GOV.UK</a>
+                                guidance, or can a solicitor help me?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The <a href="https://www.gov.uk/" target="_blank">GOV.UK</a> website provides the
+                                official rules for Section 21 and Section 8 evictions. You can read them here: <a
+                                    target="_blank"
+                                    href="https://www.gov.uk/evicting-tenants/section-21-and-section-8-noticesHowever">https://www.gov.uk/evicting-tenants/section-21-and-section-8-noticesHowever</a>
+                                , <a href="https://www.gov.uk/" target="_blank">GOV.UK</a> only offers general guidance
+                                it won’t prepare your notices, represent you in court, or ensure compliance with legal
+                                technicalities. Our solicitors provide a fixed-fee eviction service, making sure your
+                                notice is legally correct and you regain possession as quickly as possible.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How long does the Section 21 eviction process take in 2025?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The Section 21 process usually takes 2–4 months, depending on court availability and
+                                whether the tenant contests the claim. Using the accelerated procedure can speed things
+                                up if your paperwork is correct.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I evict a tenant immediately for rent arrears?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No — you must follow the legal process. Rent arrears are dealt with under Section 8
+                                notices (Ground 8 and others). A solicitor can help you prepare the claim to avoid
+                                delays or invalid notices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What happens if my tenant refuses to leave after notice expires?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If the tenant does not leave, you will need to apply to the county court for a possession
+                                order. In some cases, bailiffs or High Court enforcement officers may be required.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Do I need a solicitor to serve an eviction notice?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Not legally — but eviction law is highly technical. Incorrect notices are a leading
+                                reason for cases being thrown out. A solicitor ensures compliance, saving you time and
+                                avoiding costly mistakes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Where can I find official eviction rules?
+                            </span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The official government guidance is available here: <a
+                                    href="https://www.gov.uk/evicting-tenants/section-21-and-section-8-notices"
+                                    target="_blank">https://www.gov.uk/evicting-tenants/section-21-and-section-8-notices</a>Remember:
+                                GOV.UK only provides general information. Our solicitors offer a fixed-fee service to
+                                manage the entire process for you.
                             </p>
                         </div>
                     </div>
@@ -1437,16 +1524,16 @@
                 }
             });
         });
-const contactForm = document.querySelector('form');
+        const contactForm = document.querySelector('form');
         // Form submission handling
-        if(contactForm){
-contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We will contact you within 24 hours to discuss your eviction case.');
-        });
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you within 24 hours to discuss your eviction case.');
+            });
 
         }
-        
+
         // Show/hide fixed CTA based on scroll
         window.addEventListener('scroll', function () {
             const fixedCta = document.getElementById('fixedCta');
@@ -1504,361 +1591,361 @@ contactForm.addEventListener('submit', function (e) {
 
     </script>
     <!-- ================== SCRIPT ================== -->
-<script>
-  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-  const mobileMenuClose = document.getElementById('mobileMenuClose');
-  const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+    <script>
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
 
-  mobileMenuToggle.addEventListener('click', () => {
-    mobileMenuDrawer.classList.add('open');
-  });
-
-  mobileMenuClose.addEventListener('click', () => {
-    mobileMenuDrawer.classList.remove('open');
-  });
-</script>
-<script>
-// Your fixed JavaScript goes here
-let searchResults = [];
-let currentResultIndex = 0;
-let originalHTML = '';
-
-// Store original content on page load
-window.addEventListener('load', function () {
-    originalHTML = document.body.innerHTML;
-    // createFixedSearchNavigation();
-});
-
-// Function to toggle search (works for both desktop and mobile)
-function toggleSearch() {
-    let searchBar = document.getElementById("mobileSearch");
-    console.log('Toggle search clicked', searchBar); // Debug log
-    
-    if (searchBar) {
-        searchBar.classList.toggle("show");
-        if (searchBar.classList.contains("show")) {
-            console.log('Search bar shown'); // Debug log
-            document.getElementById("mobileSearchInput").focus();
-            showSearchNavigation();
-            // Show results nav if there are existing results
-            if (searchResults.length > 0) {
-                showSearchResultsNav();
-            }
-        } else {
-            console.log('Search bar hidden'); // Debug log
-            clearSearchHighlights();
-            hideSearchNavigation();
-            hideSearchResultsNav();
-        }
-    } else {
-        console.error('Search bar not found!');
-    }
-}
-
-// Desktop search toggle
-const desktopSearchToggle = document.getElementById("searchToggle");
-if (desktopSearchToggle) {
-    desktopSearchToggle.addEventListener("click", toggleSearch);
-    console.log('Desktop search button found and connected');
-}
-
-// Mobile search toggle
-const mobileSearchToggle = document.getElementById("mobileSearchToggle");
-if (mobileSearchToggle) {
-    mobileSearchToggle.addEventListener("click", toggleSearch);
-    console.log('Mobile search button found and connected');
-}
-
-// Real-time search as user types
-const searchInput = document.getElementById("mobileSearchInput");
-if (searchInput) {
-    searchInput.addEventListener("input", function (e) {
-        const query = e.target.value.trim();
-        console.log('Search query:', query); // Debug log
-        if (query.length >= 2) {
-            performSearch(query);
-        } else {
-            clearSearchHighlights();
-            hideSearchNavigation();
-            hideSearchResultsNav();
-        }
-    });
-}
-
-// Navigation button event listeners
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prevResultBtn');
-    const nextBtn = document.getElementById('nextResultBtn');
-    const clearBtn = document.getElementById('clearSearchBtn');
-    const closeBtn = document.getElementById('closeSearchBtn');
-    
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => navigateToResult('prev'));
-    }
-    
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => navigateToResult('next'));
-    }
-    
-    if (clearBtn) {
-        clearBtn.addEventListener('click', () => {
-            clearSearchHighlights();
-            hideSearchNavigation();
-            hideSearchResultsNav();
-            document.getElementById('mobileSearchInput').value = '';
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuDrawer.classList.add('open');
         });
-    }
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            // Hide search bar
-            const searchBar = document.getElementById('mobileSearch');
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenuDrawer.classList.remove('open');
+        });
+    </script>
+    <script>
+        // Your fixed JavaScript goes here
+        let searchResults = [];
+        let currentResultIndex = 0;
+        let originalHTML = '';
+
+        // Store original content on page load
+        window.addEventListener('load', function () {
+            originalHTML = document.body.innerHTML;
+            // createFixedSearchNavigation();
+        });
+
+        // Function to toggle search (works for both desktop and mobile)
+        function toggleSearch() {
+            let searchBar = document.getElementById("mobileSearch");
+            console.log('Toggle search clicked', searchBar); // Debug log
+
             if (searchBar) {
-                searchBar.classList.remove("show");
-            }
-            // Reset everything
-            clearSearchHighlights();
-            hideSearchNavigation();
-            hideSearchResultsNav();
-            document.getElementById('mobileSearchInput').value = '';
-        });
-    }
-});
-
-// Search form submission
-// const searchForm = document.querySelector('#mobileSearch form');
-// if (searchForm) {
-//     searchForm.addEventListener('submit', function(e) {
-//         e.preventDefault();
-//         if (searchResults.length > 0) {
-//             navigateToResult('next');
-//         } else {
-//             const query = document.getElementById('mobileSearchInput').value.trim();
-//             if (query.length >= 2) {
-//                 performSearch(query);
-//             }
-//         }
-//     });
-// }
-
-// Rest of your JavaScript functions remain the same...
-function performSearch(query) {
-    clearSearchHighlights();
-    if (!query) return;
-
-    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-    searchResults = [];
-
-    const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_TEXT,
-        {
-            acceptNode: function (node) {
-                const parent = node.parentElement;
-                if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
-                    return NodeFilter.FILTER_REJECT;
+                searchBar.classList.toggle("show");
+                if (searchBar.classList.contains("show")) {
+                    console.log('Search bar shown'); // Debug log
+                    document.getElementById("mobileSearchInput").focus();
+                    showSearchNavigation();
+                    // Show results nav if there are existing results
+                    if (searchResults.length > 0) {
+                        showSearchResultsNav();
+                    }
+                } else {
+                    console.log('Search bar hidden'); // Debug log
+                    clearSearchHighlights();
+                    hideSearchNavigation();
+                    hideSearchResultsNav();
                 }
-                return NodeFilter.FILTER_ACCEPT;
+            } else {
+                console.error('Search bar not found!');
             }
         }
-    );
 
-    const textNodes = [];
-    let node;
-    while (node = walker.nextNode()) {
-        if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
-            textNodes.push(node);
+        // Desktop search toggle
+        const desktopSearchToggle = document.getElementById("searchToggle");
+        if (desktopSearchToggle) {
+            desktopSearchToggle.addEventListener("click", toggleSearch);
+            console.log('Desktop search button found and connected');
         }
-    }
 
-    textNodes.forEach(textNode => {
-        const parent = textNode.parentNode;
-        const text = textNode.textContent;
+        // Mobile search toggle
+        const mobileSearchToggle = document.getElementById("mobileSearchToggle");
+        if (mobileSearchToggle) {
+            mobileSearchToggle.addEventListener("click", toggleSearch);
+            console.log('Mobile search button found and connected');
+        }
 
-        if (regex.test(text)) {
-            const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
-            const wrapper = document.createElement('span');
-            wrapper.innerHTML = highlightedHTML;
-
-            parent.replaceChild(wrapper, textNode);
-
-            const highlights = wrapper.querySelectorAll('.search-highlight');
-            highlights.forEach(highlight => {
-                searchResults.push(highlight);
+        // Real-time search as user types
+        const searchInput = document.getElementById("mobileSearchInput");
+        if (searchInput) {
+            searchInput.addEventListener("input", function (e) {
+                const query = e.target.value.trim();
+                console.log('Search query:', query); // Debug log
+                if (query.length >= 2) {
+                    performSearch(query);
+                } else {
+                    clearSearchHighlights();
+                    hideSearchNavigation();
+                    hideSearchResultsNav();
+                }
             });
         }
-    });
 
-    console.log('Search results found:', searchResults.length); // Debug log
-    updateSearchUI();
-    if (searchResults.length > 0) {
-        currentResultIndex = 0;
-        scrollToResult(searchResults[currentResultIndex]);
-        showSearchNavigation();
-        showSearchResultsNav();
-    } else {
-        hideSearchNavigation();
-        hideSearchResultsNav();
-    }
-}
+        // Navigation button event listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevBtn = document.getElementById('prevResultBtn');
+            const nextBtn = document.getElementById('nextResultBtn');
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const closeBtn = document.getElementById('closeSearchBtn');
 
-function clearSearchHighlights() {
-    const highlights = document.querySelectorAll('.search-highlight');
-    highlights.forEach(highlight => {
-        const parent = highlight.parentNode;
-        parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
-        parent.normalize();
-    });
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => navigateToResult('prev'));
+            }
 
-    const emptySpans = document.querySelectorAll('span:empty');
-    emptySpans.forEach(span => span.remove());
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => navigateToResult('next'));
+            }
 
-    searchResults = [];
-    currentResultIndex = 0;
-    updateSearchUI();
-}
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    clearSearchHighlights();
+                    hideSearchNavigation();
+                    hideSearchResultsNav();
+                    document.getElementById('mobileSearchInput').value = '';
+                });
+            }
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    // Hide search bar
+                    const searchBar = document.getElementById('mobileSearch');
+                    if (searchBar) {
+                        searchBar.classList.remove("show");
+                    }
+                    // Reset everything
+                    clearSearchHighlights();
+                    hideSearchNavigation();
+                    hideSearchResultsNav();
+                    document.getElementById('mobileSearchInput').value = '';
+                });
+            }
+        });
 
-function navigateToResult(direction) {
-    if (searchResults.length === 0) return;
+        // Search form submission
+        // const searchForm = document.querySelector('#mobileSearch form');
+        // if (searchForm) {
+        //     searchForm.addEventListener('submit', function(e) {
+        //         e.preventDefault();
+        //         if (searchResults.length > 0) {
+        //             navigateToResult('next');
+        //         } else {
+        //             const query = document.getElementById('mobileSearchInput').value.trim();
+        //             if (query.length >= 2) {
+        //                 performSearch(query);
+        //             }
+        //         }
+        //     });
+        // }
 
-    if (direction === 'next') {
-        currentResultIndex = (currentResultIndex + 1) % searchResults.length;
-    } else if (direction === 'prev') {
-        currentResultIndex = currentResultIndex === 0 ? searchResults.length - 1 : currentResultIndex - 1;
-    }
+        // Rest of your JavaScript functions remain the same...
+        function performSearch(query) {
+            clearSearchHighlights();
+            if (!query) return;
 
-    scrollToResult(searchResults[currentResultIndex]);
-    updateSearchUI();
-}
+            const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+            searchResults = [];
 
-function scrollToResult(element) {
-    document.querySelectorAll('.search-highlight.active').forEach(el => {
-        el.classList.remove('active');
-    });
+            const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                {
+                    acceptNode: function (node) {
+                        const parent = node.parentElement;
+                        if (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                }
+            );
 
-    element.classList.add('active');
+            const textNodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+                if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
+                    textNodes.push(node);
+                }
+            }
 
-    element.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest"
-    });
-}
+            textNodes.forEach(textNode => {
+                const parent = textNode.parentNode;
+                const text = textNode.textContent;
 
-function updateSearchUI() {
-    // Update counter in the fixed navigation
-    const counter = document.getElementById('searchCounter');
-    if (counter && searchResults.length > 0) {
-        counter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
-    } else if (counter) {
-        counter.textContent = '';
-    }
-    
-    // Update counter in the search results nav
-    const resultCounter = document.getElementById('searchResultCounter');
-    if (resultCounter) {
-        if (searchResults.length > 0) {
-            resultCounter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
-        } else {
-            resultCounter.textContent = '0 of 0';
+                if (regex.test(text)) {
+                    const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+                    const wrapper = document.createElement('span');
+                    wrapper.innerHTML = highlightedHTML;
+
+                    parent.replaceChild(wrapper, textNode);
+
+                    const highlights = wrapper.querySelectorAll('.search-highlight');
+                    highlights.forEach(highlight => {
+                        searchResults.push(highlight);
+                    });
+                }
+            });
+
+            console.log('Search results found:', searchResults.length); // Debug log
+            updateSearchUI();
+            if (searchResults.length > 0) {
+                currentResultIndex = 0;
+                scrollToResult(searchResults[currentResultIndex]);
+                showSearchNavigation();
+                showSearchResultsNav();
+            } else {
+                hideSearchNavigation();
+                hideSearchResultsNav();
+            }
         }
-    }
-    
-    // Update navigation buttons
-    updateNavigationButtons();
-}
 
-function updateNavigationButtons() {
-    const prevBtn = document.getElementById('prevResultBtn');
-    const nextBtn = document.getElementById('nextResultBtn');
-    
-    if (prevBtn && nextBtn) {
-        // Disable/enable buttons based on current position
-        prevBtn.disabled = searchResults.length === 0 || currentResultIndex === 0;
-        nextBtn.disabled = searchResults.length === 0 || currentResultIndex === searchResults.length - 1;
-        
-        // For circular navigation, always enable if there are results
-        if (searchResults.length > 1) {
-            prevBtn.disabled = false;
-            nextBtn.disabled = false;
+        function clearSearchHighlights() {
+            const highlights = document.querySelectorAll('.search-highlight');
+            highlights.forEach(highlight => {
+                const parent = highlight.parentNode;
+                parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                parent.normalize();
+            });
+
+            const emptySpans = document.querySelectorAll('span:empty');
+            emptySpans.forEach(span => span.remove());
+
+            searchResults = [];
+            currentResultIndex = 0;
+            updateSearchUI();
         }
-    }
-}
 
-function showSearchResultsNav() {
-    const nav = document.getElementById('searchResultsNav');
-    if (nav && searchResults.length > 0) {
-        nav.style.display = 'block';
-        updateNavigationButtons();
-    }
-}
+        function navigateToResult(direction) {
+            if (searchResults.length === 0) return;
 
-function hideSearchResultsNav() {
-    const nav = document.getElementById('searchResultsNav');
-    if (nav) {
-        nav.style.display = 'none';
-    }
-}
+            if (direction === 'next') {
+                currentResultIndex = (currentResultIndex + 1) % searchResults.length;
+            } else if (direction === 'prev') {
+                currentResultIndex = currentResultIndex === 0 ? searchResults.length - 1 : currentResultIndex - 1;
+            }
 
-function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+            scrollToResult(searchResults[currentResultIndex]);
+            updateSearchUI();
+        }
 
-// function createFixedSearchNavigation() {
-//     if (document.getElementById('fixedSearchNav')) return;
+        function scrollToResult(element) {
+            document.querySelectorAll('.search-highlight.active').forEach(el => {
+                el.classList.remove('active');
+            });
 
-//     const navContainer = document.createElement('div');
-//     navContainer.id = 'fixedSearchNav';
-//     navContainer.style.cssText = `
-//         position: fixed;
-//         top: 50%;
-//         right: 20px;
-//         transform: translateY(-50%);
-//         background: rgba(0, 0, 0, 0.8);
-//         backdrop-filter: blur(10px);
-//         border-radius: 10px;
-//         padding: 15px;
-//         display: none;
-//         flex-direction: column;
-//         gap: 10px;
-//         z-index: 10000;
-//         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-//         min-width: 60px;
-//         align-items: center;
-//     `;
+            element.classList.add('active');
 
-//     navContainer.innerHTML = `
-//         <button type="button" onclick="navigateToResult('prev')" 
-//                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-//             ↑
-//         </button>
-//         <div id="searchCounter" style="color: white; font-size: 12px; text-align: center; min-height: 20px; font-weight: bold;"></div>
-//         <button type="button" onclick="navigateToResult('next')" 
-//                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-//             ↓
-//         </button>
-//         <button type="button" onclick="hideSearchNavigation()" 
-//                 style="padding: 8px; background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
-//             ×
-//         </button>
-//     `;
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest"
+            });
+        }
 
-//     document.body.appendChild(navContainer);
-// }
+        function updateSearchUI() {
+            // Update counter in the fixed navigation
+            const counter = document.getElementById('searchCounter');
+            if (counter && searchResults.length > 0) {
+                counter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
+            } else if (counter) {
+                counter.textContent = '';
+            }
 
-function showSearchNavigation() {
-    const nav = document.getElementById('fixedSearchNav');
-    if (nav && searchResults.length > 0) {
-        nav.style.display = 'flex';
-    }
-}
+            // Update counter in the search results nav
+            const resultCounter = document.getElementById('searchResultCounter');
+            if (resultCounter) {
+                if (searchResults.length > 0) {
+                    resultCounter.textContent = `${currentResultIndex + 1} of ${searchResults.length}`;
+                } else {
+                    resultCounter.textContent = '0 of 0';
+                }
+            }
 
-function hideSearchNavigation() {
-    const nav = document.getElementById('fixedSearchNav');
-    if (nav) {
-        nav.style.display = 'none';
-    }
-}
-</script>
+            // Update navigation buttons
+            updateNavigationButtons();
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prevResultBtn');
+            const nextBtn = document.getElementById('nextResultBtn');
+
+            if (prevBtn && nextBtn) {
+                // Disable/enable buttons based on current position
+                prevBtn.disabled = searchResults.length === 0 || currentResultIndex === 0;
+                nextBtn.disabled = searchResults.length === 0 || currentResultIndex === searchResults.length - 1;
+
+                // For circular navigation, always enable if there are results
+                if (searchResults.length > 1) {
+                    prevBtn.disabled = false;
+                    nextBtn.disabled = false;
+                }
+            }
+        }
+
+        function showSearchResultsNav() {
+            const nav = document.getElementById('searchResultsNav');
+            if (nav && searchResults.length > 0) {
+                nav.style.display = 'block';
+                updateNavigationButtons();
+            }
+        }
+
+        function hideSearchResultsNav() {
+            const nav = document.getElementById('searchResultsNav');
+            if (nav) {
+                nav.style.display = 'none';
+            }
+        }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // function createFixedSearchNavigation() {
+        //     if (document.getElementById('fixedSearchNav')) return;
+
+        //     const navContainer = document.createElement('div');
+        //     navContainer.id = 'fixedSearchNav';
+        //     navContainer.style.cssText = `
+        //         position: fixed;
+        //         top: 50%;
+        //         right: 20px;
+        //         transform: translateY(-50%);
+        //         background: rgba(0, 0, 0, 0.8);
+        //         backdrop-filter: blur(10px);
+        //         border-radius: 10px;
+        //         padding: 15px;
+        //         display: none;
+        //         flex-direction: column;
+        //         gap: 10px;
+        //         z-index: 10000;
+        //         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        //         min-width: 60px;
+        //         align-items: center;
+        //     `;
+
+        //     navContainer.innerHTML = `
+        //         <button type="button" onclick="navigateToResult('prev')" 
+        //                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+        //             ↑
+        //         </button>
+        //         <div id="searchCounter" style="color: white; font-size: 12px; text-align: center; min-height: 20px; font-weight: bold;"></div>
+        //         <button type="button" onclick="navigateToResult('next')" 
+        //                 style="padding: 12px; background: var(--accent-teal, #20B2AA); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+        //             ↓
+        //         </button>
+        //         <button type="button" onclick="hideSearchNavigation()" 
+        //                 style="padding: 8px; background: rgba(255, 255, 255, 0.2); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+        //             ×
+        //         </button>
+        //     `;
+
+        //     document.body.appendChild(navContainer);
+        // }
+
+        function showSearchNavigation() {
+            const nav = document.getElementById('fixedSearchNav');
+            if (nav && searchResults.length > 0) {
+                nav.style.display = 'flex';
+            }
+        }
+
+        function hideSearchNavigation() {
+            const nav = document.getElementById('fixedSearchNav');
+            if (nav) {
+                nav.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
