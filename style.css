@@ -427,7 +427,7 @@
 
  /* Services Section */
  .services-section {
-     padding: 5rem 0;
+     padding: 1rem 0;
      background-color: var(--white);
  }
 
@@ -435,7 +435,7 @@
      text-align: center;
      font-size: 2.5rem;
      color: var(--primary-navy);
-     margin-bottom: 1rem;
+     margin-bottom: 0.5rem;
  }
 
  .section-subtitle {
@@ -449,15 +449,15 @@
  .service-grid {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 2rem;
-     margin-top: 3rem;
+     gap: 1rem;
+     margin-top: 2rem;
  }
 
  .service-card {
      background-color: var(--white);
      border: 2px solid var(--border-color);
      border-radius: 12px;
-     padding: 2rem;
+     padding: 1rem;
      text-align: center;
      transition: all 0.3s ease;
  }
@@ -486,7 +486,7 @@
 
  /* Pricing Section */
  .pricing-section {
-     padding: 5rem 0;
+     padding: 2rem 0;
      background-color: var(--neutral-bg);
  }
 
@@ -574,7 +574,7 @@
 
  /* Process Section */
  .process-section {
-     padding: 5rem 0;
+     padding: 2rem 0;
      background-color: var(--neutral-bg);
  }
 
@@ -583,13 +583,6 @@
      margin: 0 auto;
      padding: 0 1rem;
  } */
-
- .section-title {
-     text-align: center;
-     font-size: 2.5rem;
-     color: var(--primary-navy);
-     margin-bottom: 1rem;
- }
 
  .section-subtitle {
      text-align: center;
@@ -641,7 +634,7 @@
 
  /* Why Choose Us Section */
  .why-choose-section {
-     padding: 5rem 0;
+     padding: 2rem 0;
      background: linear-gradient(135deg, var(--primary-navy), #1a3a5c);
      color: var(--white);
  }
@@ -655,13 +648,13 @@
 
  .feature-card {
      text-align: center;
-     padding: 1.5rem;
+     padding: 1rem;
  }
 
  .feature-icon {
      font-size: 3rem;
      color: var(--accent-teal);
-     margin-bottom: 1rem;
+     margin-bottom: 0.5rem;
  }
 
  .feature-card h4 {
@@ -1033,7 +1026,7 @@
      }
 
      .defences-section {
-         margin: 80px 0;
+         margin: 30px 0;
          margin-left: 20px;
          margin-right: 20px;
      }
@@ -1062,6 +1055,9 @@
         text-align: center;
         font-size: 0.9rem;
       }
+       .feature-icon {
+     font-size: 2.5rem;
+       }
  }
 
  @media (min-width: 769px) {
