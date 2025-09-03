@@ -1027,8 +1027,6 @@
 
      .defences-section {
          margin: 30px 0;
-         margin-left: 20px;
-         margin-right: 20px;
      }
 
      .accelerated-grid {
@@ -1444,7 +1442,8 @@
  }
 
  .defences-section {
-     /* margin: 80px 0; */
+     margin: 80px 0;
+     padding: 20px 40px;
      /* margin-left: 50px;
      margin-right: 50px; */
  }
@@ -1453,7 +1452,7 @@
  .defences-table-container {
      background: var(--white);
      border-radius: 20px;
-     padding: 0;
+        padding: 20px;
      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
      border: 1px solid rgba(19, 136, 125, 0.1);
  }
@@ -1471,7 +1470,7 @@
  }
 
  .eviction-table th {
-     /* padding: 25px 30px; */
+     padding: 25px 30px;
      /* text-align: left; */
      /* font-weight: 600; */
      /* font-size: 1.2rem; */
