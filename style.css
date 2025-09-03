@@ -1048,6 +1048,20 @@
      .restrictions-card {
          margin-bottom: 20px;
      }
+      .header-actions >.cta-button-white{
+        margin: 8px;
+        border-radius: 10px !important;
+        padding: 8px 15px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      .header-actions >.cta-button{
+        margin: 8px;
+        border-radius: 10px !important;
+        padding: 8px 15px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
  }
 
  @media (min-width: 769px) {
