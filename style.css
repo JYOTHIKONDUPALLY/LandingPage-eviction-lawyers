@@ -1433,9 +1433,9 @@
  }
 
  .defences-section {
-     margin: 80px 0;
-     margin-left: 50px;
-     margin-right: 50px;
+     /* margin: 80px 0; */
+     /* margin-left: 50px;
+     margin-right: 50px; */
  }
 
 
@@ -1444,12 +1444,11 @@
      border-radius: 20px;
      padding: 0;
      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
-     overflow: hidden;
      border: 1px solid rgba(19, 136, 125, 0.1);
  }
 
  .eviction-table {
-     width: 100%;
+     /* width: 100%; */
      /* border-collapse: collapse; */
      margin: 0;
      /* font-size: 1rem; */
@@ -1462,8 +1461,8 @@
 
  .eviction-table th {
      /* padding: 25px 30px; */
-     text-align: left;
-     font-weight: 600;
+     /* text-align: left; */
+     /* font-weight: 600; */
      /* font-size: 1.2rem; */
      border: none;
  }
@@ -1483,7 +1482,7 @@
  } */
 
  .defence-item {
-     padding: 25px 30px;
+     /* padding: 25px 30px; */
      height: 100%;
      transition: all 0.3s ease;
      position: relative;
@@ -1504,7 +1503,7 @@
  .defence-item p {
      color: #666;
      margin: 0;
-     line-height: 1.6;
+     /* line-height: 1.6; */
  }
 
  .defence-item.non-unique em {
