@@ -994,6 +994,9 @@
      .non-tenant-section {
          padding: 20px 10px;
      }
+     .trust-banner{
+        padding:5px;
+     }
 
      .trust-banner .d-none.d-md-block {
          display: none !important;
