@@ -1007,32 +1007,6 @@
          display: block !important;
      }
 
-     /* .eviction-table {
-         font-size: 0.9rem;
-     }
-
-     .eviction-table th {
-         padding: 18px 12px;
-         font-size: 0.75rem;
-     }
-
-     .defence-item {
-         padding: 20px 15px;
-     }
-
-     .defence-item strong {
-         font-size: 1rem;
-     }
-
-     .defences-table-container {
-         margin: 0 -15px;
-         border-radius: 0;
-     } */
-
-     /* .defences-section {
-         margin: 30px 0;
-     } */
-
      .accelerated-grid {
          display: flex;
          flex-direction: column;
@@ -1445,94 +1419,6 @@
      line-height: 1.6;
  }
 
- /* .defences-section {
-     margin: 80px 0;
-     padding: 20px 40px;
-     /* margin-left: 50px;
-     margin-right: 50px;} */
- */
-
-/* 
- .defences-table-container {
-     background: var(--white);
-     border-radius: 20px;
-        padding: 20px;
-     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
-     border: 1px solid rgba(19, 136, 125, 0.1);
- } */
-
- .eviction-table {
-     /* width: 100%; */
-     /* border-collapse: collapse; */
-     /* margin: 0; */
-     /* font-size: 1rem; */
- }
-
- /* .eviction-table thead {
-     background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
-     color: var(--white);
- } */
-
- .eviction-table th {
-     /* padding: 25px 30px; */
-     /* text-align: left; */
-     /* font-weight: 600; */
-     /* font-size: 1.2rem; */
-     /* border: none; */
- }
-
- /* .tenancy-header {
-     background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
- }
-
- .non-tenancy-header {
-     background: linear-gradient(135deg, var(--accent-teal), #16a085);
- } */
-
- /* .eviction-table td {
-     padding: 0;
-     border: 1px solid rgba(19, 136, 125, 0.1);
-     vertical-align: top;
- } */
-
- .defence-item {
-     /* padding: 25px 30px; */
-     /* height: 100%;
-     transition: all 0.3s ease;
-     position: relative; */
- }
-
- .defence-item:hover {
-     /* background: rgba(19, 136, 125, 0.03); */
-     /* background-color: #f9f1d6; */
- }
-
- /* .defence-item strong {
-     color: var(--primary-navy);
-     font-size: 1.1rem;
-     display: block;
-     margin-bottom: 8px;
- } */
-
- .defence-item p {
-     /* color: #666;
-     margin: 0; */
-     /* line-height: 1.6; */
- }
-
- /* .defence-item.non-unique em {
-     color: #888;
-     font-style: italic;
- }
-
- .eviction-table tr:nth-child(even) {
-     background: rgba(247, 248, 250, 0.3);
- }
-
- .eviction-table tr:hover {
-     background: rgba(19, 136, 125, 0.02);
- } */
-
  /* === Section Layout === */
 .download-form-section {
     margin: 60px auto;
@@ -1721,11 +1607,11 @@
 
 /* ===== Defences Section Styling ===== */
 .defences-section {
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   background: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
