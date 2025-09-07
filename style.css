@@ -643,7 +643,7 @@
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
      gap: 2rem;
-     margin-top: 3rem;
+     margin-top: 2rem;
  }
 
  .feature-card {
@@ -772,6 +772,7 @@
  .checklist {
      list-style: none;
      padding-left: 0;
+     margin-top: 1rem;
  }
 
  .checklist li {
@@ -1816,3 +1817,175 @@
   background: #eef2ff;
   transition: background 0.2s ease-in-out;
 }
+
+  .legal-info-section {
+            background: white;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .legal-info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .mission-network-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid var(--accent-teal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-network-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: var(--accent-teal);
+            opacity: 0.05;
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .mission-network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .mission-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .mission-item h3 i {
+            font-size: 1.2rem;
+        }
+
+        .mission-item p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Legal Disclosure Card */
+        .legal-disclosure-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid var(--primary-navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-disclosure-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+            background: var(--primary-navy);
+            opacity: 0.03;
+            border-radius: 50%;
+            transform: translate(40px, -40px);
+        }
+
+        .legal-disclosure-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .legal-disclosure-title i {
+            font-size: 1.3rem;
+            color: var(--accent-teal);
+        }
+
+        .legal-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legal-section-title::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--secondary-orange);
+            border-radius: 50%;
+        }
+
+        .legal-section p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section strong {
+            color: var(--primary-navy);
+            font-weight: 600;
+        }
+           /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .mission-network-card,
+            .legal-disclosure-card {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .mission-network-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .legal-section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mission-network-card,
+            .legal-disclosure-card {
+                padding: 1.5rem;
+            }
+        }
