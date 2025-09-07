@@ -1951,7 +1951,8 @@
             }
         }
         .team-card-bottom{
-            display: block;
+            flex-direction: column;
+            gap:20px;
         }
 
         @media (max-width: 480px) {
@@ -2005,12 +2006,8 @@
     animation: fadeInUp 0.8s ease-out;
     margin-bottom: 40px;
     color: white;
-    /* display: flex;
-    justify-content: space-between; */
-    display: grid;
-    grid-template-columns:1fr  1fr;
-    gap: 40px;
-    align-items: start;
+    display: flex;
+    justify-content: space-between;
 }
 
 
