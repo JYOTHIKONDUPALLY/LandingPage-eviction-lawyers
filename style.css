@@ -1675,7 +1675,7 @@
 @media (max-width: 900px) {
     .download-form-section {
         flex-direction: column;
-        padding: 24px;
+        /* padding: 24px; */
     }
 
     .form-side {
@@ -1950,6 +1950,9 @@
                 padding: 1rem;
             }
         }
+        .team-card-footer{
+            display: block;
+        }
 
         @media (max-width: 480px) {
             .mission-network-card,
@@ -1975,7 +1978,7 @@
     z-index: 2;
 }
 
-.team-card {
+.team-card .team-card-footer{
     background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
     backdrop-filter: blur(20px);
     border-radius: 20px;
@@ -1992,6 +1995,7 @@
     gap: 40px;
     align-items: start;
 }
+
 
 .team-member {
     display: flex;
@@ -2612,3 +2616,5 @@
         [hidden] {
             display: none !important;
         }
+
+
