@@ -2002,7 +2002,6 @@
 .team-card-bottom {
   background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
   backdrop-filter: blur(20px);
-  border-radius: 20px;
   padding: 40px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   border: none;
