@@ -258,18 +258,12 @@
                                 </select>
                             </div>
 
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" id="FormRequired" required>
-                                <label class="form-check-label" for="consentCheck" style="color: black;">
-                                    I would like to receive a free eviction form template by email.
-                                </label>
-                            </div>
-
                             <div class="mb-3">
                                 <label for="situation" class="form-label">Brief Description</label>
                                 <textarea class="form-control" id="situation" name="situation" rows="3"
                                     placeholder="Tell us about your situation..."></textarea>
                             </div>
+
                             <button type="submit" class="submit-btn">
                                 <i class="fas fa-rocket"></i> Start My Eviction Now
                             </button>
@@ -780,8 +774,7 @@
                 <a href="https://assets.publishing.service.gov.uk/media/601bc1858fa8f53fc3d799d9/n5-eng.pdf"
                     target="_blank">Get your free template plus a step-by-step guide today.</a>
             </div> -->
-            <a href="https://assets.publishing.service.gov.uk/media/601bc1858fa8f53fc3d799d9/n5-eng.pdf"
-                target="_blank"><img src="./assets/Eviction Form.jpeg" alt="Eviction Form Template"></a>
+            <img src="./assets/Eviction Form.jpeg" alt="Eviction Form Template">
             <p>Completing this form correctly is essential to avoid delays or case dismissal. For peace of mind, our
                 fixed-fee solicitors manage it for you—valid, Compliant, and ready for submission to court, start to
                 finish.</p>
@@ -801,39 +794,7 @@
                         </div>
                     </div> -->
         </div>
-        <div class="form-side">
-            <form id="evictionForm">
-                <div class="form-group">
-                    <label for="name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="eviction-name" name="name" required placeholder="Enter your full name">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="eviction-email" name="email" required placeholder="your.email@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number <span class="optional">(recommended)</span></label>
-                    <input type="tel" id="eviction-phone" name="phone" placeholder="Your phone number">
-                </div>
-
-                <button type="submit" class="primary-cta">
-                    Get My Free Eviction Form
-                </button>
-
-                <div class="secondary-cta">
-                    Prefer us to handle everything? <a href="tel:+4403333050381">Call our solicitors now on
-                        03333050381</a>
-                </div>
-
-                <div class="reinforcement">
-                    <span>⚖️</span>
-                    <div>Our fixed-fee solicitors prepare court-compliant eviction notices to save you time and avoid
-                        costly mistakes.</div>
-                </div>
-            </form>
-        </div>
+   \\\\
     </section>
     <!-- Defences Section -->
     <section class="defences-section">
@@ -1417,18 +1378,13 @@
                                 <option> No Tenancy Agreement</option>
                             </select>
                         </div>
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" id="FormRequired" required>
-                            <label class="form-check-label" for="consentCheck">
-                                I would like to receive a free eviction form template by email.
-                            </label>
-                        </div>
 
                         <div class="mb-3">
                             <label class="form-label" style="font-weight: 500;">Brief Description of Situation</label>
                             <textarea class="form-control" rows="3"
                                 placeholder="Tell us about your situation..."></textarea>
                         </div>
+
                         <!-- ✅ Consent Checkbox -->
                         <div class="form-check mb-4">
                             <input class="form-check-input" type="checkbox" id="consentCheck" required>
@@ -2200,90 +2156,47 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const evictionForm = document.getElementById("evictionForm");
+
+    if (evictionForm) {
+        evictionForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const submitBtn = evictionForm.querySelector("button[type='submit']");
+            const originalBtnHtml = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(evictionForm);
+            formData.append("access_key", "bffdd0be-0783-4051-8b4d-e1b5def20683"); // 🔑 Replace with your key
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            })
+                .then(response => {
+                    if (response.ok) {
+                        evictionForm.reset();
+                        alert("✅ Thank you! Your free eviction form link has been sent to your email.");
+                    } else {
+                        throw new Error("Submission failed");
+                    }
+                })
+                .catch(() => {
+                    alert("❌ Oops! Something went wrong. Please try again.");
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnHtml;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+});
 </script>
 
-
-
-    <!-- <script>
-        const evictionForm = document.getElementById('evictionForm');
-
-        if (evictionForm) {
-            evictionForm.addEventListener('submit', function (e) {
-                console.log('Form submission attempted'); // Debug log
-                e.preventDefault();
-
-                const name = document.getElementById('eviction-name').value.trim(); // ✅ fixed
-                const email = document.getElementById('eviction-email').value.trim();
-                const phone = document.getElementById('eviction-phone').value.trim();
-
-                console.log('Form data:', { name, email, phone }); // Debug log
-
-                // Form validation
-                if (!name || !email) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-
-                // Simulate form submission
-                const submitBtn = document.querySelector('.primary-cta');
-                const originalText = submitBtn.textContent;
-
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-
-                setTimeout(() => {
-                    alert('Thank you! Your free eviction form template has been sent to your email.');
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    document.getElementById('evictionForm').reset();
-                }, 2000);
-
-                // Here you would normally send the data to your server
-                console.log('Form submitted:', { name, email, phone });
-            });
-        }
-
-        // Add smooth hover animations
-        document.querySelectorAll('.form-group input').forEach((input) => {
-            input.addEventListener('focus', function () {
-                this.parentElement.style.transform = 'translateY(-2px)';
-            });
-
-            input.addEventListener('blur', function () {
-                this.parentElement.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Thank you message function
-        function showThankYouMessage() {
-            const formContainer = document.querySelector('.form-container');
-            const thankYouHTML = `
-    <div class="thank-you-message" style="text-align: center; padding: 40px 20px;">
-      <h2 style="color: var(--primary-navy); font-size: 1.75rem; margin-bottom: 20px;">
-        ✅ Your N5 Eviction Form Sample Is on Its Way
-      </h2>
-      <p style="color: var(--body-text); font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">
-        We've sent the N5 possession claim form sample and eviction checklist to your email.
-      </p>
-      <div style="background: rgba(232, 93, 4, 0.1); padding: 20px; border-radius: 12px; margin-bottom: 32px; border-left: 4px solid var(--secondary-orange);">
-        <p style="color: var(--body-text); margin-bottom: 12px;">
-          <strong>⚖️ Remember</strong> — this is only a guide. If the form is completed incorrectly, your case could be delayed or dismissed in court.
-        </p>
-        <p style="color: var(--body-text);">
-          👉 For complete peace of mind, let our fixed-fee eviction solicitors prepare and file the claim for you. We handle everything from start to finish — legally valid, court-compliant, and fast.
-        </p>
-      </div>
-      <button onclick="window.location.href='tel:+447716809331'" style="background: var(--secondary-orange); color: var(--white); border: none; padding: 16px 32px; font-size: 1.1rem; font-weight: 600; border-radius: 12px; cursor: pointer; margin-bottom: 16px; width: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(232, 93, 4, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-        📞 Speak to a Solicitor Now
-      </button>
-      <p style="color: var(--body-text); font-size: 0.95rem;">
-        Or <a href="#" style="color: var(--accent-teal); text-decoration: underline; font-weight: 600;" onclick="alert('Booking system would open here')">book a free call back within 24 hours</a>.
-      </p>
-    </div>
-  `;
-            formContainer.innerHTML = thankYouHTML;
-        }
-    </script> -->
 </body>
 
 </html>
