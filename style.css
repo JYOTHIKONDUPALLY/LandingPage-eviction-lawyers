@@ -1893,14 +1893,6 @@
     z-index: 2;
 }
 
-.section-subtitle {
-    font-size: 1.25rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-    color: rgba(255, 255, 255, 0.9);
-}
-
 .team-card {
     background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
     backdrop-filter: blur(20px);
