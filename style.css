@@ -12,6 +12,7 @@
      line-height: 1.6;
      color: var(--body-text);
      padding-top: 76px;
+     padding-bottom: 50px;
  }
 
  .mobile-drawer {
@@ -1051,7 +1052,7 @@
      background: var(--primary-navy);
      color: white;
      padding: 40px 0;
-     margin-bottom: 30px;
+     /* margin-bottom: 30px; */
  }
 
  footer a {
