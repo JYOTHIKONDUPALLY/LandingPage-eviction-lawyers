@@ -13,217 +13,7 @@
 </head>
 
 <body>
-    <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container" style="max-width:100vw; padding:0px 30px;">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>Eviction Help</a>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#court-lookup">Court Finder</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-
-            <div class="d-none d-lg-flex align-items-center me-3">
-                <button id="searchToggle" class="search-button me-3">
-                    <i class="fas fa-search me-2"></i> Search
-                </button>
-                <a href="#contact" class="cta-button">Start My Eviction</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Header -->
-    <nav class="navbar navbar-dark bg-dark fixed-top d-lg-none flex-column p-0">
-        <div class="d-flex align-items-center justify-content-between w-100 px-3 py-2">
-            <a class="navbar-brand m-0" href="#">
-                <i class="fa-solid fa-scale-balanced me-1"></i> Eviction Help
-            </a>
-
-            <div class="d-flex align-items-center">
-                <button id="mobileSearchToggle" class="btn btn-link text-white p-0 me-3">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
-                <span class="me-2" style="width:1px; height:30px; background:#fff; display:inline-block;"></span>
-                <span class="text-white me-2">MENU</span>
-                <button id="mobileMenuToggle" class="btn btn-link text-white p-0">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Search Bar - Moved outside navbar for better positioning -->
-    <div id="mobileSearch">
-        <form>
-            <input type="text" id="mobileSearchInput" placeholder="Search through the guide...">
-            <!-- <button type="submit" class="search-submit-btn">
-            <i class="fas fa-search"></i>
-            <span class="d-none d-sm-inline">Next</span>
-        </button> -->
-            <div class="d-block d-lg-inline m-2 m-lg-0">
-                <button type="button" id="closeSearchBtn" class="search-submit-btn">
-                    <i class="fas fa-times me-1"></i>
-                    <span class="d-none d-sm-inline">Close</span>
-                </button>
-
-                <button type="button" id="clearSearchBtn" class="search-submit-btn">
-                    <i class="fas fa-eraser me-1"></i>
-                    <span class="d-none d-sm-inline">Clear</span>
-                </button>
-            </div>
-        </form>
-
-        <!-- Search Results Navigation - Shows when there are multiple results -->
-        <div id="searchResultsNav"
-            style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="search-result-info">
-                    <span id="searchResultCounter">0 of 0</span>
-                    <small class="text-muted ms-2">results</small>
-                </div>
-                <div class="search-nav-buttons">
-                    <button type="button" id="prevResultBtn" class="btn btn-outline-primary btn-sm me-2">
-                        <i class="fas fa-chevron-up"></i>
-                        <span class="d-none d-md-inline ms-1">Previous</span>
-                    </button>
-                    <button type="button" id="nextResultBtn" class="btn btn-primary btn-sm">
-                        <i class="fas fa-chevron-down"></i>
-                        <span class="d-none d-md-inline ms-1">Next</span>
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- Search options -->
-            <!-- <div class="mt-2 d-flex justify-content-between align-items-center">
-            <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary btn-sm">
-                <i class="fas fa-times me-1"></i>Clear
-            </button>
-        </div> -->
-        </div>
-    </div>
-    <!-- ================== TOP DRAWER MENU ================== -->
-    <div id="mobileMenuDrawer" class="mobile-drawer">
-        <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
-            <h5 class="m-0">Menu</h5>
-            <button id="mobileMenuClose" class="btn btn-link p-0" style="color: var(--white);">
-                <i class="fas fa-times fa-lg"></i>
-            </button>
-        </div>
-        <ul class="navbar-nav p-3">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pricing">Our Prices</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#court-lookup">Court Finder</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        </ul>
-    </div>
-    <!-- Action Buttons -->
-    <div class="header-actions d-flex w-100 d-lg-none">
-        <a href="#contact" class="cta-button w-50 rounded-0">Contact us</a>
-        <a href="tel:03333050381" class="cta-button-white w-50 rounded-0">Existing clients</a>
-    </div>
-
-    <!-- Mobile CTA Banner -->
-    <div class=" d-none d-lg-block mobile-cta-banner d-md-none">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-8 ">
-                    <a href="tel:03333050381" class="btn btn-sm"> <i class="fas fa-phone me-3"></i><small><strong>Call
-                                Free: 03333050381</strong></small></a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Trust Banner -->
-    <div class="trust-banner">
-        <!-- Desktop version - static -->
-        <div class="d-none d-md-block">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            SRA Regulated Solicitors
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-database"></i>
-                            ICO Registered
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-home"></i>
-                            Landlords Ourselves
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-pound-sign"></i>
-                            Fixed-Fee from £100 + VAT
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-map-marked-alt"></i>
-                            Nationwide Coverage
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile version - carousel -->
-        <div class="d-md-none">
-            <div id="trustCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            SRA Regulated Solicitors
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="trust-item">
-                            <i class="fas fa-database"></i>
-                            ICO Registered
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="trust-item">
-                            <i class="fas fa-home"></i>
-                            Landlords Ourselves
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="trust-item">
-                            <i class="fas fa-pound-sign"></i>
-                            Fixed-Fee from £100 + VAT
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="trust-item">
-                            <i class="fas fa-map-marked-alt"></i>
-                            Nationwide Coverage
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -1585,7 +1375,7 @@
         </div>
     </section>
 
-    <div class="fixed-cta" id="fixedCta">
+    <!-- <div class="fixed-cta" id="fixedCta">
         <div class="container">
             <div class="cta-nav">
                 <a href="tel:+4403333050381" class="cta-button-nav">
@@ -1602,7 +1392,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="py-4 team-card-bottom">
 
         <!-- Left Section -->
