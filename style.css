@@ -460,6 +460,7 @@
      border-radius: 12px;
      padding: 2rem;
      margin: 2rem 0;
+     height:200px;
  }
 
  .warning-card-red {
@@ -1034,6 +1035,10 @@
       }
        .feature-icon {
      font-size: 2.5rem;
+       }
+       .warning-card{
+        height:150px;
+        margin:10px;
        }
  }
 
