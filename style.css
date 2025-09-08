@@ -2555,15 +2555,6 @@
             box-shadow: 0 6px 25px rgba(10, 35, 66, 0.15);
         }
 
-        .widget-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-teal) 0%, var(--secondary-orange) 100%);
-        }
 
         .google-logo {
             display: flex;
