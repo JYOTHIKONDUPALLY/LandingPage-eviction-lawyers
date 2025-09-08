@@ -1427,32 +1427,14 @@
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(19, 136, 125, 0.1);
     display: flex;
-    gap: 48px;
+    gap: 28px;
     align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap;
     max-width: 1200px;
 }
-
-/* === Left Content Side === */
 .content-side {
-    flex: 1.1;
-    min-width: 340px;
+    flex: 1;
 }
-
-/* .section-title {
-    font-size: 1.9rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: var(--heading-text, #0a233f);
-}
-
-.section-subtitle {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--body-text, #555);
-    margin-bottom: 24px;
-} */
 
 /* Download CTA */
 .cta-highlight {
@@ -1477,8 +1459,9 @@
     text-decoration: underline;
 }
 
-.content-side img {
+.content-side-img {
     width: 100%;
+    min-width: 200px;
     max-width: 420px;
     height: 220px;               /* fixed preview height */
     object-fit: cover;           /* crop instead of squish */
@@ -1489,16 +1472,6 @@
     margin: 16px 0;
 }
 
-/* === Form Side === */
-.form-side {
-    flex: 1;
-    min-width: 340px;
-    background: var(--white, #fff);
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(10, 35, 66, 0.08);
-    border: 1px solid rgba(19, 136, 125, 0.1);
-    padding: 28px 32px;
-}
 
 /* Form Elements */
 .form-group {
