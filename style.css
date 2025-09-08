@@ -198,7 +198,7 @@
  .mobile-cta-banner {
      background: linear-gradient(135deg, var(--secondary-orange), #d44d02);
      color: var(--white);
-     padding: 0.75rem 0;
+     padding: 0.5rem 0;
      text-align: center;
      display: none;
      /* margin-top: 20px; */
@@ -327,23 +327,6 @@
      box-shadow: 0 0 0 0.2rem rgba(19, 136, 125, 0.25);
  }
 
- .submit-btn {
-     width: 100%;
-     padding: 1rem;
-     background-color: var(--secondary-orange);
-     color: var(--white);
-     border: none;
-     border-radius: 6px;
-     font-size: 1.1rem;
-     font-weight: 600;
-     cursor: pointer;
-     transition: all 0.3s ease;
- }
-
- .submit-btn:hover {
-     background-color: #d44d02;
-     transform: translateY(-2px);
- }
 
  /* Stats */
  .hero-stats {
@@ -2503,26 +2486,7 @@
             box-shadow: 0 0 0 3px rgba(19, 136, 125, 0.1);
         }
 
-        .submit-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #0d2a4a 100%);
-            color: var(--white);
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(10, 35, 66, 0.2);
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(10, 35, 66, 0.3);
-        }
-
-        .trust-message {
+              .trust-message {
             text-align: center;
             font-size: 13px;
             color: #6b7280;
