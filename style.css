@@ -890,72 +890,6 @@
      display: block;
  }
 
- /* .fixed-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, var(--primary-navy), var(--accent-teal));
-            color: var(--white);
-            z-index: 1000;
-            padding: 10px 0;
-            box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .cta-button-nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--white);
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 12px;
-            min-width: 80px;
-        }
-
-        .cta-button-nav:hover {
-            color: var(--white);
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
-        }
-
-        .cta-button-nav i {
-            font-size: 1.5rem;
-            margin-bottom: 4px;
-            color: var(--secondary-orange);
-        }
-
-        .cta-button-nav span {
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .phone-pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        } */
-
  .fixed-cta {
      position: fixed;
      bottom: 0;
@@ -1110,9 +1044,9 @@
       .header-actions >.cta-button{
         margin: 8px;
         border-radius: 10px !important;
-        padding: 8px 15px;
+        padding: 12px 20px;
         text-align: center;
-        font-size: 0.75rem;
+        font-size: 0.9rem;
       }
        .feature-icon {
      font-size: 2.5rem;
