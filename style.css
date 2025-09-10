@@ -336,7 +336,7 @@
  .stat-item {
      text-align: center;
      background: rgba(255, 255, 255, 0.1);
-     padding: 1rem 1.5rem;
+     padding: 0.5rem 1rem;
      border-radius: 10px;
      font-weight: 500;
      border: 1px solid rgba(255, 255, 255, 0.2);
@@ -345,6 +345,7 @@
             gap: 0.5rem; */
      backdrop-filter: blur(10px);
      transition: all 0.3s ease;
+     max-width:175px;
  }
 
  .stat-number {
@@ -358,12 +359,11 @@
      opacity: 0.8;
  }
  .lawyer-profile {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, var(--accent-teal), #0A2342);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
             padding: 30px;
-            margin: 40px 0;
+            margin: 20px 0;
             animation: fadeInUp 0.6s ease-out 0.5s both;
         }
 
@@ -398,7 +398,7 @@
         }
 
         .lawyer-title {
-            color: var(--accent-teal);
+            color: var(--white);
             font-size: 1rem;
             font-weight: 600;
         }
@@ -436,10 +436,10 @@
 
  /* Cards */
  .card-modern {
-     background: white;
+     /* background: white; */
      border: none;
-     border-radius: 12px;
-     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+     /* border-radius: 12px; */
+     /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
      margin-bottom: 2rem;
      overflow: hidden;
  }
@@ -471,12 +471,7 @@
      color: var(--secondary-orange);
  }
 
-
- .section-alt {
-     background-color: var(--neutral-bg);
- }
-
- .section-highlight {
+.section-highlight {
      background: linear-gradient(135deg, var(--accent-teal), #0A2342);
      color: var(--white);
  }
@@ -1070,7 +1065,10 @@
  }
 
  @media (min-width: 992px) {
-
+ .hero-stats {
+         grid-template-columns: repeat(2, 1fr);
+         /* 2 columns */
+     }
      /* lg and above */
      .small {
          max-width: 400px;
@@ -2362,7 +2360,7 @@
 
         .card-body {
             padding: 24px;
-            background: var(--white);
+            /* background: var(--white); */
         }
 
         .success-message {
