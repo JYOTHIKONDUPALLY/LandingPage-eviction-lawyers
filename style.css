@@ -259,13 +259,13 @@
      background: url("./assets//evictionHelpBg.avif") center/cover no-repeat;
      color: var(--white);
      padding: 1.5rem 0;
-     max-height: 100vh;
+     min-height: 100vh;
      display: flex;
      align-items: center;
  }
 
  .hero h1 {
-     font-size: 3.5rem;
+     font-size: 2.5rem;
      font-weight: 700;
      line-height: 1.1;
      margin-bottom: 1.5rem;
