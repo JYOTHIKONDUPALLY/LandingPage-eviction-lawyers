@@ -259,6 +259,7 @@
      background: url("./assets//evictionHelpBg.avif") center/cover no-repeat;
      color: var(--white);
      padding: 1rem 0;
+     padding-top: 2rem;
      display: flex;
      align-items: start;
  }
