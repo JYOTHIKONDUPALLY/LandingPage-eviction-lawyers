@@ -911,15 +911,15 @@
 
 
  .non-tenant-section {
-     background: var(--white);
+     /* background: var(--white); */
      padding: 60px 40px;
-     border-radius: 30px;
+     /* border-radius: 30px; */
      margin: 40px 0;
-     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+     /* box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1); */
      position: relative;
  }
 
- .non-tenant-section::before {
+ /* .non-tenant-section::before {
      content: '';
      position: absolute;
      top: 0;
@@ -929,7 +929,7 @@
      background: var(--accent-teal);
      border-radius: 30px 30px 0 0;
 
- }
+ } */
 
  .non-tenant-title {
      font-size: 2.2rem;
@@ -2176,7 +2176,7 @@
             background: var(--secondary-orange);
             color: var(--white);
             padding: 15px 40px;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             /* font-size: 1.1rem; */
