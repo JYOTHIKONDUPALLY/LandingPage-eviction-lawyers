@@ -305,7 +305,7 @@
 
  .hero .description {
      font-size: clamp(0.9rem, 2vw, 1rem);
-     margin-bottom: 1.25rem;
+     margin-bottom: 1.75rem;
      opacity: 0.9;
      line-height: 1.4;
  }
@@ -314,7 +314,7 @@
  .hero-stats {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     gap: 0.5rem;
+     gap: 1rem;
      margin: 1rem 0;
  }
 
@@ -326,6 +326,13 @@
      border: 1px solid rgba(255, 255, 255, 0.2);
      backdrop-filter: blur(10px);
      transition: all 0.3s ease;
+     height:100px;
+     width:100%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
  }
 
  .stat-item:hover {
