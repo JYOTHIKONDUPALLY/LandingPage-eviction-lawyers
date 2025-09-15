@@ -230,6 +230,11 @@
      background: linear-gradient(135deg, var(--accent-teal), #16a085);
      color: var(--white);
      padding: 0.75rem 0;
+     position: fixed;
+     top:80px;
+     z-index: 1000;
+     width: 100%;
+     text-align: center
  }
 
  .carousel-item {
@@ -313,9 +318,10 @@
  /* Compact stats grid */
  .hero-stats {
      display: grid;
-     grid-template-columns: repeat(4, 1fr);
+     grid-template-columns: repeat(2, 1fr);
      gap: 1rem;
      margin: 1rem 0;
+     margin-top: 5rem;
  }
 
  .stat-item {
@@ -419,11 +425,11 @@
      .hero-stats {
          grid-template-columns: repeat(2, 1fr);
          gap: 0.75rem;
-         margin: 1.5rem 0;
+         margin: 1rem 0;
      }
 
      .contact-form {
-         margin-top: 2rem;
+         margin-top: 1rem;
          max-height: none;
      }
 
@@ -433,9 +439,6 @@
  }
 
  @media (max-width: 768px) {
-     .hero-stats {
-         grid-template-columns: repeat(2, 1fr);
-     }
 
      .stat-item {
          padding: 0.75rem 0.5rem;
@@ -480,9 +483,10 @@
      background: linear-gradient(135deg, var(--accent-teal), #0A2342);
      backdrop-filter: blur(20px);
      border: 1px solid rgba(255, 255, 255, 0.2);
-     padding: 30px;
+     padding: 10px 40px;
      margin: 20px 0;
      animation: fadeInUp 0.6s ease-out 0.5s both;
+     /* min-height: 80vh; */
  }
 
  .lawyer-header {
@@ -555,11 +559,11 @@
  /* Cards */
  .card-modern {
      background-color: var(--white);
-     padding: 2rem;
+     padding: 1rem;
      border-radius: 12px;
      text-align: start;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-     transition: transform 0.3s ease;
+     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); */
+     /* transition: transform 0.3s ease; */
      position: relative;
      border: 2px solid var(--accent-teal)
  }
@@ -641,6 +645,7 @@
      padding: 1rem;
      text-align: center;
      transition: all 0.3s ease;
+     min-height: 300px;
  }
 
  .service-card:hover {
@@ -1093,11 +1098,6 @@
          background: none;
      }
 
-     .hero-stats {
-         grid-template-columns: repeat(2, 1fr);
-         /* 2 columns */
-     }
-
      .lawyer-header {
          flex-direction: column;
          text-align: center;
@@ -1123,6 +1123,7 @@
      }
 
      .trust-banner {
+        top:120px;
          padding: 5px;
      }
 
@@ -1213,10 +1214,6 @@
  }
 
  @media (min-width: 992px) {
-     .hero-stats {
-         grid-template-columns: repeat(2, 1fr);
-         /* 2 columns */
-     }
 
      /* lg and above */
      .small {
@@ -1675,8 +1672,8 @@
 
  /* === Section Layout === */
  .download-form-section {
-     margin: 40px auto;
-     padding: 40px;
+     /* margin: 40px auto;
+     padding: 40px; */
      /* background: var(--white, #fff); */
      border-radius: 24px;
      /* box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08); */
@@ -2256,6 +2253,9 @@
 
  .expertise-list {
      display: grid;
+         padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
      /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
      gap: 15px;
  }
@@ -2459,6 +2459,7 @@
  .cta-content {
      position: relative;
      z-index: 1;
+     padding: 1rem 3rem;
  }
 
  .cta-title {
