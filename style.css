@@ -472,10 +472,19 @@
     .section-flex{
         display: block;
     }
-
-     .stat-item {
-         padding: 0.75rem 0.5rem;
+    .section-left .section-right{
+        width:100%;
+        min-width: none !important;
+    }
+    .hero-stats {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 0.75rem;
+         margin: 1rem 0;
+         justify-items: center;
+          max-width:100%;
      }
+
+
      .social-icons{
           align-items: center;
           margin-top:0rem !important;
@@ -493,7 +502,11 @@
      }
 
      .hero-stats {
-         gap: 0.5rem;
+         grid-template-columns: repeat(1, 1fr);
+         gap: 0.75rem;
+         margin: 1rem 0;
+         justify-items: center;
+          max-width:100%;
      }
  }
 
@@ -679,7 +692,7 @@
      text-align: center;
      transition: all 0.3s ease;
      min-height: 300px;
-     max-width:300px;
+     max-width:250px;
  }
 
  .service-card:hover {
@@ -1245,7 +1258,7 @@
          margin: 10px;
      }
       .service-card{
-        max-width:350px;
+        max-width:300px;
       }
        .process-card {
          max-width:350px;
@@ -1448,7 +1461,7 @@
      border-radius: 20px;
      position: relative;
      overflow: hidden;
-     margin-left:-70px;
+     margin-left:-50px;
  }
 
  .info-box h4 {
@@ -1483,7 +1496,7 @@
      border-radius: 20px;
      position: relative;
      overflow: hidden;
-     margin-left: -80px;
+     margin-left: -60px;
      margin-top:60px;
  }
 
