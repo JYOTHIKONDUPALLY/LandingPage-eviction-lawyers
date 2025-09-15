@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="d-none d-lg-block  fixed-top">
+    <nav class="d-none d-md-block  fixed-top">
         <div class="navbar navbar-expand-lg navbar-dark">
             <div class="container" style="max-width:100vw; padding:0px 30px;">
                 <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>Eviction Help</a>
@@ -216,7 +216,7 @@
 
 
     <!-- Hero Section -->
-    <section class="hero mt-0 mt-md-4 ">
+    <section class="hero mt-0 mt-lg-4 ">
         <div class="container">
             <h1>Fast & Legal Tenant Eviction Help</h1>
             <div class="row align-items-start justify-content-md-start">
@@ -2138,11 +2138,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             const carousel = document.getElementById('trustCarousel');
             if (carousel) {
+                console.log("carousel found",carousel)
                 new bootstrap.Carousel(carousel, {
                     interval: 2000,
                     wrap: true,
                     pause: false
                 });
+            }else{
+                console.log("carousel not found")
             }
         });
 
