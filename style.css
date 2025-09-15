@@ -566,10 +566,11 @@
      border: 1px solid #fecaca;
      border-left: 6px solid var(--secondary-orange);
      border-radius: 12px;
-     padding: 2rem;
+     padding: 1rem;
      margin: 2rem 0;
-     height: 200px;
-     width: 270px;
+  height: 100%;       /* Let height adapt */
+  max-height: 175px;
+     /* min-width: 270px; */
  }
 
  .warning-card-red {
@@ -1135,6 +1136,10 @@
        .warning-grid {
          justify-items: center;
        }
+        .warning-card {
+         height: 300px;
+         margin: 10px;
+     }
 
      .accelerated-card,
      .restrictions-card {
@@ -1159,11 +1164,6 @@
 
      .feature-icon {
          font-size: 2.5rem;
-     }
-
-     .warning-card {
-         height: 150px;
-         margin: 10px;
      }
  }
 
