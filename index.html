@@ -13,27 +13,69 @@
 </head>
 
 <body>
-    <nav class="d-none d-lg-block navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container" style="max-width:100vw; padding:0px 30px;">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>Eviction Help</a>
+    <nav class="d-none d-lg-block  fixed-top">
+        <div class="navbar navbar-expand-lg navbar-dark">
+            <div class="container" style="max-width:100vw; padding:0px 30px;">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-scale-balanced me-1"></i>Eviction Help</a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#court-lookup">Court Finder</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#court-lookup">Court Finder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-lg-none d-xl-flex align-items-center me-3">
+                    <button id="searchToggle" class="search-button me-3">
+                        <i class="fas fa-search me-2 "></i> Search
+                    </button>
+                    <a href="#contact" class="cta-button">Start My Eviction</a>
+                </div>
             </div>
-
-            <div class="d-lg-none d-xl-flex align-items-center me-3">
-                <button id="searchToggle" class="search-button me-3">
-                    <i class="fas fa-search me-2 "></i> Search
-                </button>
-                <a href="#contact" class="cta-button">Start My Eviction</a>
+        </div>
+        <!-- Trust Banner -->
+        <div class="trust-banner">
+            <!-- Desktop version - static -->
+            <div class="d-none d-md-block">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="trust-item" style="border-left: var(--accent-teal);">
+                                <i class="fas fa-shield-alt"></i>
+                                SRA Regulated Solicitors
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="trust-item">
+                                <i class="fas fa-database"></i>
+                                ICO Registered
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="trust-item">
+                                <i class="fas fa-home"></i>
+                                Landlords Ourselves
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="trust-item">
+                                <i class="fas fa-pound-sign"></i>
+                                Fixed-Fee from £100 + VAT
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="trust-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Nationwide Coverage
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,7 +99,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Search Bar - Moved outside navbar for better positioning -->
     <div id="mobileSearch">
         <form>
@@ -131,50 +172,9 @@
         <a href="#contact" class="cta-button w-50 rounded-0">Contact us</a>
         <a href="tel:03333050381" class="cta-button-white w-50 rounded-0">Existing clients</a>
     </div>
-
-
-    <!-- Trust Banner -->
-    <div class="trust-banner ">
-        <!-- Desktop version - static -->
-        <div class="d-none d-md-block">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <div class="trust-item" style="border-left: var(--accent-teal);">
-                            <i class="fas fa-shield-alt"></i>
-                            SRA Regulated Solicitors
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-database"></i>
-                            ICO Registered
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-home"></i>
-                            Landlords Ourselves
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-pound-sign"></i>
-                            Fixed-Fee from £100 + VAT
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="trust-item">
-                            <i class="fas fa-map-marked-alt"></i>
-                            Nationwide Coverage
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="trust-banner">
         <!-- Mobile version - carousel -->
-        <div class="d-md-none">
+        <div class="d-block d-md-none">
             <div id="trustCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -212,14 +212,17 @@
         </div>
     </div>
 
+
+
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero mt-0 mt-md-4 ">
         <div class="container">
-             <h1>Fast & Legal Tenant Eviction Help</h1>
+            <h1>Fast & Legal Tenant Eviction Help</h1>
             <div class="row align-items-start justify-content-md-start">
                 <!-- Hero Content - left Side on Desktop -->
                 <div class="col-lg-6 order-lg-1 order-1 mb-2 mb-lg-0">
-                   
+
                     <p class="subtitle">England & Wales Professional Legal Services</p>
                     <p class="description">When you need tenants removed quickly and lawfully, our experienced eviction
                         solicitors provide clear guidance and decisive action. We manage the full legal process from
@@ -511,7 +514,8 @@
         <div class="row">
             <div class="col-lg-6 accelerated-card">
                 <div class="card-header">
-                    <h3 class="card-title" style="color: white;"><i class="fas fa-rocket me-2 card-icon"></i>Faster Eviction Process</h3>
+                    <h3 class="card-title" style="color: white;"><i class="fas fa-rocket me-2 card-icon"></i>Faster
+                        Eviction Process</h3>
                 </div>
                 <div class="accelerated-content">
                     <p class="lead-text">Landlords can use the accelerated possession procedure with a valid Section
@@ -546,7 +550,8 @@
 
             <div class=" col-lg-6 restrictions-card">
                 <div class="card-header">
-                    <h3 class="card-title" style="color: white;"><i class="fas fa-exclamation-triangle me-2 card-icon warning"></i>Critical
+                    <h3 class="card-title" style="color: white;"><i
+                            class="fas fa-exclamation-triangle me-2 card-icon warning"></i>Critical
                         Restrictions</h3>
                 </div>
                 <div class="restrictions-content">
@@ -1480,28 +1485,32 @@
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                         <div class="warning-card"
                             style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
-                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-key me-2"></i> Change Locks</h3>
+                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-key me-2"></i> Change Locks
+                            </h3>
                             <p>Without a court order</p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                         <div class="warning-card"
                             style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
-                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-plug me-2"></i> Cut Utilities</h3>
+                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-plug me-2"></i> Cut Utilities
+                            </h3>
                             <p>To force tenant out</p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                         <div class="warning-card"
                             style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
-                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-user-times me-2"></i> Harass Tenants</h3>
+                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-user-times me-2"></i> Harass
+                                Tenants</h3>
                             <p>Or make threats</p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                         <div class="warning-card"
                             style="background: rgba(255, 255, 255, 0.1); border-left-color: white;">
-                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-user-times me-2"></i> Don't Remove
+                            <h3 style="color: white; font-size:1.5rem;"><i class="fas fa-user-times me-2"></i> Don't
+                                Remove
                                 Belongings</h3>
                             <p>Tenant may sue for componsation</p>
                         </div>
@@ -1989,65 +1998,68 @@
                             </div>
                         </div>
                         <div class="social-icons">
-                        <div  aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i>
+                            <div aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div aria-label="Facebook"><i class="fa-brands fa-facebook"></i></div>
+                            <div aria-label="Twitter"><i class="fa-brands fa-twitter"></i></div>
                         </div>
-                        <div  aria-label="Facebook"><i class="fa-brands fa-facebook"></i></div>
-                        <div  aria-label="Twitter"><i class="fa-brands fa-twitter"></i></div>
                     </div>
-                    </div>
-                    
+
                 </div>
             </div>
         </div>
-            <div class="mt-2 mt-md-0">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-around gap-3 mb-3">
+        <div class="mt-2 mt-md-0">
+            <div
+                class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-around gap-3 mb-3">
 
-  <!-- Logos section -->
-  <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
-    <div class="yoshkidiv">
-      <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
-    </div>
-    <div class="icoLogo">
-      <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
-    </div>
-  </div>
+                <!-- Logos section -->
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+                    <div class="yoshkidiv">
+                        <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
+                    </div>
+                    <div class="icoLogo">
+                        <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+                    </div>
+                </div>
 
-  <!-- Buttons section -->
-<div class="d-flex flex-column flex-md-row align-items-stretch justify-content-center gap-4">
-  <div class="flex-fill">
-    <a href="#contact" class="cta-button-orange w-100 h-100 d-flex align-items-center justify-content-center">
-      Evict my tenant
-    </a>
-  </div>
-  <div class="flex-fill">
-    <a href="tel:03333050381" class="cta-button-white w-100 h-100 d-flex align-items-center justify-content-center">
-      Unsure - Call us
-    </a>
-  </div>
-</div>
+                <!-- Buttons section -->
+                <div class="d-flex flex-column flex-md-row align-items-stretch justify-content-center gap-4">
+                    <div class="flex-fill">
+                        <a href="#contact"
+                            class="cta-button-orange w-100 h-100 d-flex align-items-center justify-content-center">
+                            Evict my tenant
+                        </a>
+                    </div>
+                    <div class="flex-fill">
+                        <a href="tel:03333050381"
+                            class="cta-button-white w-100 h-100 d-flex align-items-center justify-content-center">
+                            Unsure - Call us
+                        </a>
+                    </div>
+                </div>
 
-
-</div>
 
             </div>
-             <hr style="color: white;" />
 
-            <!-- Footer Bottom -->
-            <div class="d-block d-md-flex justify-content-around align-items-center mt-3 footer-bottom">
-                <div class="text-center px-3">
-                    <small>&copy; 2025 Eviction Help. All rights reserved.</small>
-                </div>
-                <div class="d-block d-md-flex justify-content-center gap-2 text-center ">
-                    <p class="mb-1 mb-md-0"><a href="TermsAndConditions.html" class="text-white">Terms and
-                            Conditions</a></p>
-                    <p class="d-none d-md-block mb-0">|</p>
-                    <p class="mb-1 mb-md-0"><a href="PrivacyPolicy.html" class="text-white">Privacy Policy</a></p>
-                    <p class="d-none d-md-block mb-0">|</p>
-                    <p class="mb-1 mb-md-0"><a href="CookiePolicy.html" class="text-white">Cookie Policy</a></p>
-                    <p class="d-none d-md-block mb-0">|</p>
-                    <p class="mb-1 mb-md-0"><a href="Disclaimer.html" class="text-white">complaints</a></p>
-                </div>
+        </div>
+        <hr style="color: white;" />
+
+        <!-- Footer Bottom -->
+        <div class="d-block d-md-flex justify-content-around align-items-center mt-3 footer-bottom">
+            <div class="text-center px-3">
+                <small>&copy; 2025 Eviction Help. All rights reserved.</small>
             </div>
+            <div class="d-block d-md-flex justify-content-center gap-2 text-center ">
+                <p class="mb-1 mb-md-0"><a href="TermsAndConditions.html" class="text-white">Terms and
+                        Conditions</a></p>
+                <p class="d-none d-md-block mb-0">|</p>
+                <p class="mb-1 mb-md-0"><a href="PrivacyPolicy.html" class="text-white">Privacy Policy</a></p>
+                <p class="d-none d-md-block mb-0">|</p>
+                <p class="mb-1 mb-md-0"><a href="CookiePolicy.html" class="text-white">Cookie Policy</a></p>
+                <p class="d-none d-md-block mb-0">|</p>
+                <p class="mb-1 mb-md-0"><a href="Disclaimer.html" class="text-white">complaints</a></p>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -2862,54 +2874,54 @@
                         time: Date.now() - (7 * 24 * 60 * 60 * 1000), // 1 week ago
                         profile_photo_url: null
                     }, {
-    author_name: "Robyn Mansi",
-    rating: 5,
-    text: "Amazing team and lovely staff!! Very happy I chose SLS they’re so friendly and help you through each step of the claim. Highly recommended and very happy.",
-    time: Date.now() - (60 * 24 * 60 * 60 * 1000), // ~2 months ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "Steven Shearer",
-    rating: 5,
-    text: "Good morning I am writing this review to let you know what an absolute amazing paralegal Kaitlin is. She has been absolutely brilliant at every step of getting the payout sorted for my claim. Her level of customer service is unparalleled and she truly is an asset to your company. I can be a bit of a pit bull particularly regarding money but she's kept me level headed by managing my expectations and offering first class advice when needed. Just based on my experience with this amazing young lady I would and have no issues recommending SLS to anyone I can.",
-    time: Date.now() - (90 * 24 * 60 * 60 * 1000), // ~3 months ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "Anita Haselup",
-    rating: 5,
-    text: "I had a major leak with my housing association. SLS were amazing they got the housing ass to eventually stop the leak and got me damages to cover the stuff damaged and some compensation. Highly recommend.",
-    time: Date.now() - (30 * 24 * 60 * 60 * 1000), // ~1 month ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "Casey Garrod",
-    rating: 5,
-    text: "I worked with Emily Jordan at SLS solicitors and it was the best experience I have ever had when it comes to solicitors. She made me feel very comfortable throughout my whole case, a very kind and understanding woman she listened to all my concerns and guided me in the right direction of where I needed to be. I couldn’t have asked for anyone better. Truly amazing.",
-    time: Date.now() - (150 * 24 * 60 * 60 * 1000), // ~5 months ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "Smile Empowerment",
-    rating: 5,
-    text: "Emily Jordan is who you want to represent you in these matters. My disrepair had been affecting my mental health and Emily was empathetic to this and battled to ensure I received all works to be completed and additionally what I wanted to settle the case for. Every encounter was respectful and she was always at the end of an email or call and would always check in if there had been radio silence from the council. I know they must have been giving her absolute hell but she was tenacious and really stood up for me and my family. Thank you Emily now we are coming to the finish line of something that has affected me for well over 5 years and this really is down to all your hard work and great care management.",
-    time: Date.now() - (180 * 24 * 60 * 60 * 1000), // ~6 months ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "Prabhakara VVCR Meka",
-    rating: 5,
-    text: "I have dealt with Rebecca Barnes, she is very professional, very helpful and guided me in the right direction through the process. Much appreciated for all your kind help Rebecca during my difficult time, thank you.",
-    time: Date.now() - (14 * 24 * 60 * 60 * 1000), // ~2 weeks ago
-    profile_photo_url: null
-  },
-  {
-    author_name: "L W",
-    rating: 5,
-    text: "Ms Jordan is a God send! She really took the time to explain everything to me thoroughly and guided me through the whole process. I'd definitely recommend, thank you so much for all your hard work!",
-    time: Date.now() - (60 * 24 * 60 * 60 * 1000), // ~2 months ago
-    profile_photo_url: null
-  }
+                        author_name: "Robyn Mansi",
+                        rating: 5,
+                        text: "Amazing team and lovely staff!! Very happy I chose SLS they’re so friendly and help you through each step of the claim. Highly recommended and very happy.",
+                        time: Date.now() - (60 * 24 * 60 * 60 * 1000), // ~2 months ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "Steven Shearer",
+                        rating: 5,
+                        text: "Good morning I am writing this review to let you know what an absolute amazing paralegal Kaitlin is. She has been absolutely brilliant at every step of getting the payout sorted for my claim. Her level of customer service is unparalleled and she truly is an asset to your company. I can be a bit of a pit bull particularly regarding money but she's kept me level headed by managing my expectations and offering first class advice when needed. Just based on my experience with this amazing young lady I would and have no issues recommending SLS to anyone I can.",
+                        time: Date.now() - (90 * 24 * 60 * 60 * 1000), // ~3 months ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "Anita Haselup",
+                        rating: 5,
+                        text: "I had a major leak with my housing association. SLS were amazing they got the housing ass to eventually stop the leak and got me damages to cover the stuff damaged and some compensation. Highly recommend.",
+                        time: Date.now() - (30 * 24 * 60 * 60 * 1000), // ~1 month ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "Casey Garrod",
+                        rating: 5,
+                        text: "I worked with Emily Jordan at SLS solicitors and it was the best experience I have ever had when it comes to solicitors. She made me feel very comfortable throughout my whole case, a very kind and understanding woman she listened to all my concerns and guided me in the right direction of where I needed to be. I couldn’t have asked for anyone better. Truly amazing.",
+                        time: Date.now() - (150 * 24 * 60 * 60 * 1000), // ~5 months ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "Smile Empowerment",
+                        rating: 5,
+                        text: "Emily Jordan is who you want to represent you in these matters. My disrepair had been affecting my mental health and Emily was empathetic to this and battled to ensure I received all works to be completed and additionally what I wanted to settle the case for. Every encounter was respectful and she was always at the end of an email or call and would always check in if there had been radio silence from the council. I know they must have been giving her absolute hell but she was tenacious and really stood up for me and my family. Thank you Emily now we are coming to the finish line of something that has affected me for well over 5 years and this really is down to all your hard work and great care management.",
+                        time: Date.now() - (180 * 24 * 60 * 60 * 1000), // ~6 months ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "Prabhakara VVCR Meka",
+                        rating: 5,
+                        text: "I have dealt with Rebecca Barnes, she is very professional, very helpful and guided me in the right direction through the process. Much appreciated for all your kind help Rebecca during my difficult time, thank you.",
+                        time: Date.now() - (14 * 24 * 60 * 60 * 1000), // ~2 weeks ago
+                        profile_photo_url: null
+                    },
+                    {
+                        author_name: "L W",
+                        rating: 5,
+                        text: "Ms Jordan is a God send! She really took the time to explain everything to me thoroughly and guided me through the whole process. I'd definitely recommend, thank you so much for all your hard work!",
+                        time: Date.now() - (60 * 24 * 60 * 60 * 1000), // ~2 months ago
+                        profile_photo_url: null
+                    }
                 ];
 
                 this.updateRating(4.8, 123);

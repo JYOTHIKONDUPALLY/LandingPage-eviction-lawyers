@@ -230,11 +230,6 @@
      background: linear-gradient(135deg, var(--accent-teal), #16a085);
      color: var(--white);
      padding: 0.75rem 0;
-     position: fixed;
-     top:80px;
-     z-index: 1000;
-     width: 100%;
-     text-align: center
  }
 
  .carousel-item {
