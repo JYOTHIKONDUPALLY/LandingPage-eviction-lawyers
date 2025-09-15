@@ -278,20 +278,30 @@
      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
          url("./assets/evictionHelpBg.avif") center/cover no-repeat;
      color: var(--white);
-     min-height: calc(100vh - 120px);
-     /* Subtract header + trust banner height */
      display: flex;
      align-items: center;
      padding: 1rem 0;
      position: relative;
-     height:500px;
  }
+ .section-flex {
+  display: flex; /* allows stacking on small screens */
+  gap: 2rem;       /* space between columns */
+}
 
- .hero-container {
-     height: 100%;
-     display: flex;
-     align-items: center;
- }
+.section-left,
+.section-right {
+  flex: 1 1 50%;   /* 1:1 ratio */
+  min-width: 300px; /* ensures they don’t shrink too small */
+}
+.hero  .section-right {
+  display: flex;
+  justify-content: end !important; /* horizontal center */
+  align-items: center;     /* vertical center */
+}
+.contact-form {
+  width: 100%;       /* or max-width: 500px; if you want a fixed form width */
+}
+
 
  .hero h1 {
      font-size: clamp(1.5rem, 4vw, 2.2rem);
@@ -369,8 +379,7 @@
      /* border-radius: 12px; */
      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
      height: fit-content;
-     max-width: 450px;
-     margin-left:10%;
+     /* max-width: 450px; */
      /* max-height: calc(100vh - 200px);
             overflow-y: auto; */
  }
@@ -458,6 +467,9 @@
  }
 
  @media (max-width: 768px) {
+    .section-flex{
+        display: block;
+    }
 
      .stat-item {
          padding: 0.75rem 0.5rem;
@@ -578,7 +590,6 @@
  /* Cards */
  .card-modern {
      background-color: var(--white);
-     padding: 1rem;
      border-radius: 12px;
      text-align: start;
      /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); */
@@ -587,9 +598,6 @@
      border: 2px solid var(--accent-teal)
  }
 
- .card-modern .card-body {
-     padding: 2rem;
- }
 
  .warning-card {
      background: #fff5f5;
@@ -616,7 +624,8 @@
      color: var(--secondary-orange);
  }
 
- .section-highlight {
+ .section-highlight  {
+    padding: 2rem 0;
      background: linear-gradient(135deg, var(--accent-teal), #0A2342);
      color: var(--white);
  }
@@ -834,7 +843,7 @@
  }
 
  /* Why Choose Us Section */
- .why-choose-section {
+ .why-choose-section > .container {
      padding: 2rem 0;
      background: linear-gradient(135deg, var(--primary-navy), #1a3a5c);
      color: var(--white);
@@ -1532,7 +1541,7 @@
  .restrictions-card {
      /* background: var(--white); */
      /* border-radius: 20px; */
-     padding: 40px;
+
      /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); */
      transition: all 0.3s ease;
      /* border: 1px solid rgba(19, 136, 125, 0.1); */
@@ -1690,39 +1699,12 @@
  }
 
  /* === Section Layout === */
- .download-form-section {
-     /* margin: 40px auto;
-     padding: 40px; */
-     /* background: var(--white, #fff); */
-     border-radius: 24px;
-     /* box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08); */
-     /* border: 1px solid rgba(19, 136, 125, 0.1); */
-
- }
-
- .content-side {
-     display: flex;
-     gap: 28px;
-     align-items: center;
-     justify-content: space-between;
- }
-
- .content-side>* {
-     flex: 1;
- }
-
- .left-section>#evictionForm>.cta-form {
-     width: 80%;
+.cta-form {
+     width: 100%;
      padding: 20px 30px;
      border-radius: 10px;
      border: 1px solid var(--accent-teal);
      margin: 0 auto;
- }
-
- .right-section {
-     display: flex;
-     align-items: center;
-     justify-content: center;
  }
 
  /* Download CTA */
@@ -2146,23 +2128,18 @@
      }
  }
 
- .team-section {
-     /* Full screen height */
+ .team-section > .container{
+    padding: 40px 0;
      width: 100%;
-     /* Take full width */
      display: flex;
-     /* Center content */
      flex-direction: column;
      justify-content: center;
-     /* Vertical centering */
      align-items: center;
-     /* Horizontal centering */
      text-align: center;
      gap: 1rem;
-     /* Spacing between elements */
      background: var(--primary-navy);
-     /* Example background */
      color: white;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--primary-navy) 100%);
  }
 
  .team-container {
@@ -2802,10 +2779,6 @@
      font-size: 14px;
  }
 
- .card-body {
-     padding: 24px;
-     /* background: var(--white); */
- }
 
  .success-message {
      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
@@ -2887,6 +2860,11 @@
      gap: 16px;
      margin-bottom: 20px;
  }
+
+ .lead{
+     list-style: none;
+ }
+
 
  .lead-input {
      padding: 14px 16px;
